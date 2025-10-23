@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface PhotosSectionProps {
@@ -166,6 +166,15 @@ const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
     }
     return 0;
   });
+
+  useEffect(() => {
+    if (selectedAlbum) {
+      const index = albums.findIndex(album => album.title === selectedAlbum);
+      if (index !== -1) {
+        setCurrentAlbumIndex(index);
+      }
+    }
+  }, [selectedAlbum]);
 
   const handlePrevAlbum = () => {
     setCurrentAlbumIndex((prev) => (prev === 0 ? albums.length - 1 : prev - 1));
