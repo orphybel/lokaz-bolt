@@ -6,24 +6,24 @@ const VideosSection = () => {
 
   const videos = [
     {
-      title: 'Concert Live - Bal des Pompiers',
-      thumbnail: 'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=800',
-      videoId: 'dQw4w9WgXcQ',
+      title: 'Baila Morena',
+      thumbnail: 'https://img.youtube.com/vi/KBiUkjqczRY/maxresdefault.jpg',
+      videoId: 'KBiUkjqczRY',
     },
     {
-      title: 'Medley Variété Française',
-      thumbnail: 'https://images.pexels.com/photos/1267697/pexels-photo-1267697.jpeg?auto=compress&cs=tinysrgb&w=800',
-      videoId: 'dQw4w9WgXcQ',
+      title: 'Hot Stuff',
+      thumbnail: 'https://img.youtube.com/vi/HBCz8yEM6LM/maxresdefault.jpg',
+      videoId: 'HBCz8yEM6LM',
     },
     {
-      title: 'Festival d\'été 2022',
-      thumbnail: 'https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=800',
-      videoId: 'dQw4w9WgXcQ',
+      title: 'Proud Mary',
+      thumbnail: 'https://img.youtube.com/vi/tOp3EK7AZbk/maxresdefault.jpg',
+      videoId: 'tOp3EK7AZbk',
     },
     {
-      title: 'Session acoustique',
-      thumbnail: 'https://images.pexels.com/photos/1820563/pexels-photo-1820563.jpeg?auto=compress&cs=tinysrgb&w=800',
-      videoId: 'dQw4w9WgXcQ',
+      title: 'Honky Tonk Women',
+      thumbnail: 'https://img.youtube.com/vi/skIlb7jcl-E/maxresdefault.jpg',
+      videoId: 'skIlb7jcl-E',
     },
   ];
 
