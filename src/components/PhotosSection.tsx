@@ -8,109 +8,27 @@ interface PhotosSectionProps {
 const PhotosSection = ({ onImageClick }: PhotosSectionProps) => {
   const albums = [
     {
-      title: 'Tour de France 2018',
+      title: 'Laissac 2025',
       photos: [
-        '/Tour de France 2018-1.avif',
-        '/Tour de France 2018-2.avif',
-        '/Tour de France 2018-3.avif',
-        '/Tour de France 2018-4.avif',
-        '/Tour de France 2018-5.avif',
-        '/Tour de France 2018-6.avif',
+        '/Laissac 2025-1.jpeg',
+        '/Laissac 2025-2.jpeg',
+        '/Laissac 2025-3.jpeg',
+        '/Laissac 2025-4.jpeg',
       ],
     },
     {
-      title: 'Roq\'N Brebis 2018',
+      title: 'Fête de la Musique 2025',
       photos: [
-        '/Roq\'N Brebis 2018-1.avif',
-        '/Roq\'N Brebis 2018-2.avif',
+        '/Fete de la Musique 2025-1.jpeg',
+        '/Fete de la Musique 2025-2.jpeg',
       ],
     },
     {
-      title: 'Fête de la Musique 2019',
+      title: 'Bal des Pompiers 2024',
       photos: [
-        '/Fete de la musique 2019-1.avif',
-        '/Fete de la musique 2019-2.avif',
-        '/Fete de la musique 2019-3.avif',
-        '/Fete de la musique 2019-4.avif',
-        '/Fete de la musique 2019-5.avif',
-        '/Fete de la musique 2019-6.avif',
-        '/Fete de la musique 2019-7.avif',
-      ],
-    },
-    {
-      title: 'Compregnac 2019',
-      photos: [
-        '/Compregnac 2019-1.avif',
-        '/Compregnac 2019-2.avif',
-        '/Compregnac 2019-3.avif',
-        '/Compregnac 2019-4.avif',
-        '/Compregnac 2019-5.avif',
-      ],
-    },
-    {
-      title: 'Flavin 2019',
-      photos: [
-        '/Flavin 2019-1.avif',
-        '/Flavin 2019-2.avif',
-        '/Flavin 2019-3.avif',
-      ],
-    },
-    {
-      title: 'Lapanouse de Cernon 2019',
-      photos: [
-        '/Lapanouse de Cernon 2019-1.avif',
-        '/Lapanouse de Cernon 2019-2.avif',
-        '/Lapanouse de Cernon 2019-3.avif',
-        '/Lapanouse de Cernon 2019-4.avif',
-        '/Lapanouse de Cernon 2019-5.avif',
-      ],
-    },
-    {
-      title: 'St Rome de Cernon 2019',
-      photos: [
-        '/St Rome de Cernon 2019-1.avif',
-        '/St Rome de Cernon 2019-2.avif',
-        '/St Rome de Cernon 2019-3.avif',
-        '/St Rome de Cernon 2019-4.avif',
-        '/St Rome de Cernon 2019-5.avif',
-        '/St Rome de Cernon 2019-6.avif',
-        '/St Rome de Cernon 2019-7.avif',
-      ],
-    },
-    {
-      title: 'Verrières 2019',
-      photos: [
-        '/verrieres 2019-1.avif',
-      ],
-    },
-    {
-      title: 'Fête de la Musique 2020',
-      photos: [
-        '/Fete de la Musqiue 2020-1.avif',
-        '/Fete de la Musqiue 2020-2.avif',
-        '/Fete de la Musqiue 2020-3.avif',
-      ],
-    },
-    {
-      title: 'Marché Gourmand Millau 2020',
-      photos: [
-        '/Marché Gourmand Millau 20202-1.avif',
-        '/Marché Gourmand Millau 20202-2.avif',
-      ],
-    },
-    {
-      title: 'Okfé Millau 2022',
-      photos: [
-        '/Okfé Millau 2022-1.avif',
-        '/Okfé Millau 2022-2.avif',
-      ],
-    },
-    {
-      title: 'Bal des Pompiers 2023',
-      photos: [
-        '/Bal des Pompiers 2023-1.avif',
-        '/Bal des Pompiers 2023-2.avif',
-        '/Bal-pompiers-millau-lokaz-1.avif',
+        '/Bal des Pompiers 2024-1.jpeg',
+        '/Bal des Pompiers 2024-2.jpeg',
+        '/Bal des Pompiers 2024-3.jpeg',
       ],
     },
     {
@@ -126,27 +44,109 @@ const PhotosSection = ({ onImageClick }: PhotosSectionProps) => {
       ],
     },
     {
-      title: 'Bal des Pompiers 2024',
+      title: 'Bal des Pompiers 2023',
       photos: [
-        '/Bal des Pompiers 2024-1.jpeg',
-        '/Bal des Pompiers 2024-2.jpeg',
-        '/Bal des Pompiers 2024-3.jpeg',
+        '/Bal des Pompiers 2023-1.avif',
+        '/Bal des Pompiers 2023-2.avif',
+        '/Bal-pompiers-millau-lokaz-1.avif',
       ],
     },
     {
-      title: 'Fête de la Musique 2025',
+      title: 'Okfé Millau 2022',
       photos: [
-        '/Fete de la Musique 2025-1.jpeg',
-        '/Fete de la Musique 2025-2.jpeg',
+        '/Okfé Millau 2022-1.avif',
+        '/Okfé Millau 2022-2.avif',
       ],
     },
     {
-      title: 'Laissac 2025',
+      title: 'Marché Gourmand Millau 2020',
       photos: [
-        '/Laissac 2025-1.jpeg',
-        '/Laissac 2025-2.jpeg',
-        '/Laissac 2025-3.jpeg',
-        '/Laissac 2025-4.jpeg',
+        '/Marché Gourmand Millau 20202-1.avif',
+        '/Marché Gourmand Millau 20202-2.avif',
+      ],
+    },
+    {
+      title: 'Fête de la Musique 2020',
+      photos: [
+        '/Fete de la Musqiue 2020-1.avif',
+        '/Fete de la Musqiue 2020-2.avif',
+        '/Fete de la Musqiue 2020-3.avif',
+      ],
+    },
+    {
+      title: 'Verrières 2019',
+      photos: [
+        '/verrieres 2019-1.avif',
+      ],
+    },
+    {
+      title: 'St Rome de Cernon 2019',
+      photos: [
+        '/St Rome de Cernon 2019-1.avif',
+        '/St Rome de Cernon 2019-2.avif',
+        '/St Rome de Cernon 2019-3.avif',
+        '/St Rome de Cernon 2019-4.avif',
+        '/St Rome de Cernon 2019-5.avif',
+        '/St Rome de Cernon 2019-6.avif',
+        '/St Rome de Cernon 2019-7.avif',
+      ],
+    },
+    {
+      title: 'Lapanouse de Cernon 2019',
+      photos: [
+        '/Lapanouse de Cernon 2019-1.avif',
+        '/Lapanouse de Cernon 2019-2.avif',
+        '/Lapanouse de Cernon 2019-3.avif',
+        '/Lapanouse de Cernon 2019-4.avif',
+        '/Lapanouse de Cernon 2019-5.avif',
+      ],
+    },
+    {
+      title: 'Flavin 2019',
+      photos: [
+        '/Flavin 2019-1.avif',
+        '/Flavin 2019-2.avif',
+        '/Flavin 2019-3.avif',
+      ],
+    },
+    {
+      title: 'Compregnac 2019',
+      photos: [
+        '/Compregnac 2019-1.avif',
+        '/Compregnac 2019-2.avif',
+        '/Compregnac 2019-3.avif',
+        '/Compregnac 2019-4.avif',
+        '/Compregnac 2019-5.avif',
+      ],
+    },
+    {
+      title: 'Fête de la Musique 2019',
+      photos: [
+        '/Fete de la musique 2019-1.avif',
+        '/Fete de la musique 2019-2.avif',
+        '/Fete de la musique 2019-3.avif',
+        '/Fete de la musique 2019-4.avif',
+        '/Fete de la musique 2019-5.avif',
+        '/Fete de la musique 2019-6.avif',
+        '/Fete de la musique 2019-7.avif',
+      ],
+    },
+    {
+      title: 'Roq\'N Brebis 2018',
+      photos: [
+        '/Roq\'N Brebis 2018-1.avif',
+        '/Roq\'N Brebis 2018-2.avif',
+      ],
+    },
+    {
+      title: 'Tour de France 2018',
+      photos: [
+        '/Tour de France 2018-1.avif',
+        '/Tour de France 2018-2.avif',
+        '/Tour de France 2018-3.avif',
+        '/Tour de France 2018-4.avif',
+        '/Tour de France 2018-5.avif',
+        '/Tour de France 2018-6.avif',
       ],
     },
     {
