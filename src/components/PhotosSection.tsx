@@ -52,14 +52,14 @@ const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
       ],
     },
     {
-      title: 'Okfé Millau 2022',
+      title: 'Okfe Millau 2022',
       photos: [
         '/Okfe-Millau-2022-1.avif',
         '/Okfe-Millau-2022-2.avif',
       ],
     },
     {
-      title: 'Marché Gourmand Millau 2020',
+      title: 'Marche Gourmand Millau 2020',
       photos: [
         '/Marche-Gourmand-Millau-2020-1.avif',
         '/Marche-Gourmand-Millau-2020-2.avif',
