@@ -47,7 +47,7 @@ const ContactSection = () => {
               Contactez-nous pour vos événements
             </h3>
             <p className="text-gray-300 mb-8">
-              Vous organisez un mariage, un festival, un bal ou une soirée privée ?
+              Vous organisez un festival, un bal ou une soirée privée ?
               N'hésitez pas à nous contacter pour discuter de votre projet. Nous serons ravis
               de vous accompagner pour faire de votre événement un moment inoubliable.
             </p>
