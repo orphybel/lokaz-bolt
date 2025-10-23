@@ -1,4 +1,4 @@
-import { Menu, X, Music2, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
 interface HeaderProps {
@@ -21,9 +21,8 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
     <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center space-x-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <Music2 className="h-10 w-10 text-[#c0392b]" />
-            <span className="text-2xl font-bold text-gray-900">L'OkaZ</span>
+          <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <img src="/logo-okaz-noir.avif" alt="L'OkaZ" className="h-12" />
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
