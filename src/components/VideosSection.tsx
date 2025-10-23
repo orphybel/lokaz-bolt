@@ -19,7 +19,7 @@ const VideosSection = () => {
       videoId: 'tOp3EK7AZbk',
     },
     {
-      title: 'Honky Tonk Women',
+      title: 'OkaZ Millau 1 Août 2022 Baila Morena',
       thumbnail: 'https://img.youtube.com/vi/skIlb7jcl-E/maxresdefault.jpg',
       videoId: 'skIlb7jcl-E',
     },
