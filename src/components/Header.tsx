@@ -11,10 +11,23 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
   const [showPhotosSubmenu, setShowPhotosSubmenu] = useState(false);
 
   const photoAlbums = [
+    'Laissac 2025',
+    'Fête de la Musique 2025',
+    'Bal des Pompiers 2024',
+    'Fête de la Musique 2024',
     'Bal des Pompiers 2023',
-    'Marché Gourmand à Millau 2022',
-    'Festival d\'été 2022',
-    'Concert de Noël 2021'
+    'Okfé Millau 2022',
+    'Marché Gourmand Millau 2020',
+    'Fête de la Musique 2020',
+    'Verrières 2019',
+    'St Rome de Cernon 2019',
+    'Lapanouse de Cernon 2019',
+    'Flavin 2019',
+    'Compregnac 2019',
+    'Fête de la Musique 2019',
+    'Roq\'N Brebis 2018',
+    'Tour de France 2018',
+    'Le Glacier Saint Affrique'
   ];
 
   return (
