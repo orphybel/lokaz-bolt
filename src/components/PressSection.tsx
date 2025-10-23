@@ -27,7 +27,7 @@ const PressSection = () => {
       title: '-15 Janvier 2019 - Comprégnac,Le rigodon.',
       publication: 'Millavois',
       date: 'Juin 2022',
-      excerpt: 'Le festival a battu son plein avec notamment la prestation remarquée du groupe L\'OkaZ qui a su captiver le public...',
+      excerpt: 'ce sera l’Okaz de venir danser...',
       link: 'https://millavois.com/2019/01/15/compregnac-le-rigodon-de-la-saint-cochon/',
     },
   ];
