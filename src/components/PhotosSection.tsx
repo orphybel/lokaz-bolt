@@ -54,15 +54,15 @@ const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
     {
       title: 'Okfé Millau 2022',
       photos: [
-        '/Okfé Millau 2022-1.avif',
-        '/Okfé Millau 2022-2.avif',
+        '/Okfe-Millau-2022-1.avif',
+        '/Okfe-Millau-2022-2.avif',
       ],
     },
     {
       title: 'Marché Gourmand Millau 2020',
       photos: [
-        '/Marché Gourmand Millau 20202-1.avif',
-        '/Marché Gourmand Millau 20202-2.avif',
+        '/Marche-Gourmand-Millau-2020-1.avif',
+        '/Marche-Gourmand-Millau-2020-2.avif',
       ],
     },
     {
@@ -134,8 +134,8 @@ const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
     {
       title: 'Roq\'N Brebis 2018',
       photos: [
-        '/Roq\'N Brebis 2018-1.avif',
-        '/Roq\'N Brebis 2018-2.avif',
+        '/RoqN-Brebis-2018-1.avif',
+        '/RoqN-Brebis-2018-2.avif',
       ],
     },
     {
