@@ -6,7 +6,7 @@ const BandSection = () => {
     { name: 'Pier-O', role: 'Batterie', icon: Drum },
     { name: 'Laurent', role: 'Clavier', icon: Piano },
     { name: 'Teddy', role: 'Guitare', icon: Guitar },
-    { name: 'PH', role: 'Basse', icon: Music },
+    { name: 'PH', role: 'Basse', icon: Guitar },
   ];
 
   return (
