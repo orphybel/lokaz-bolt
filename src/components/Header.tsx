@@ -35,7 +35,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <img src="/logo-okaz-noir.avif" alt="L'OkaZ" className="h-36" />
+            <img src="/logo-okaz.avif" alt="L'OkaZ" className="h-36" />
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
