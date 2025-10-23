@@ -52,9 +52,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
               Événements
             </button>
             <div
-              className="relative"
-              onMouseEnter={() => setShowPhotosSubmenu(true)}
-              onMouseLeave={() => setShowPhotosSubmenu(false)}
+              className="relative group"
             >
               <button
                 onClick={() => scrollToSection('photos')}
@@ -63,14 +61,13 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
                 <span>Photos</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
-              {showPhotosSubmenu && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-md py-2 max-h-96 overflow-y-auto">
+              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="w-64 bg-white shadow-lg rounded-md py-2 max-h-96 overflow-y-auto">
                   {photoAlbums.map((album, index) => (
                     <button
                       key={index}
                       onClick={() => {
                         scrollToSection('photos', album);
-                        setShowPhotosSubmenu(false);
                       }}
                       className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#c0392b] transition-colors"
                     >
@@ -78,7 +75,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
                     </button>
                   ))}
                 </div>
-              )}
+              </div>
             </div>
             <button
               onClick={() => scrollToSection('videos')}
