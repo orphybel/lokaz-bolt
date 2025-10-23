@@ -9,7 +9,7 @@ const VideosSection = () => {
       videoId: 'KBiUkjqczRY',
     },
     {
-      title: 'Hot Stuff',
+      title: 'OkaZ Millau 1 Août 2022 Hot Stuff',
       thumbnail: 'https://img.youtube.com/vi/HBCz8yEM6LM/maxresdefault.jpg',
       videoId: 'HBCz8yEM6LM',
     },
