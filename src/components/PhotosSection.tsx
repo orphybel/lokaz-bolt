@@ -11,9 +11,7 @@ const PhotosSection = ({ onImageClick }: PhotosSectionProps) => {
       title: 'Bal des Pompiers 2023',
       photos: [
         '/Bal-pompiers-millau-lokaz-1.avif',
-        '/Bal-pompiers-millau-lokaz-2.avif',
-      
-       
+        '/Bal-pompiers-millau-lokaz-2.avif',     
       ],
     },
     {
