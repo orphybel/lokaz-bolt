@@ -13,6 +13,7 @@ import Lightbox from './components/Lightbox';
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  const [selectedPhotoAlbum, setSelectedPhotoAlbum] = useState<string | undefined>(undefined);
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,7 +26,13 @@ function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, [isMenuOpen]);
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = (id: string, albumTitle?: string) => {
+    if (albumTitle) {
+      setSelectedPhotoAlbum(albumTitle);
+    } else {
+      setSelectedPhotoAlbum(undefined);
+    }
+
     const element = document.getElementById(id);
     if (element) {
       const offset = 80;
@@ -52,7 +59,7 @@ function App() {
         <Hero scrollToSection={scrollToSection} />
         <BandSection />
         <EventsSection />
-        <PhotosSection onImageClick={setLightboxImage} />
+        <PhotosSection onImageClick={setLightboxImage} selectedAlbum={selectedPhotoAlbum} />
         <VideosSection />
         <PressSection />
         <ContactSection />

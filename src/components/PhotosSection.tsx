@@ -3,9 +3,10 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface PhotosSectionProps {
   onImageClick: (imageUrl: string) => void;
+  selectedAlbum?: string;
 }
 
-const PhotosSection = ({ onImageClick }: PhotosSectionProps) => {
+const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
   const albums = [
     {
       title: 'Laissac 2025',
@@ -158,7 +159,13 @@ const PhotosSection = ({ onImageClick }: PhotosSectionProps) => {
     },
   ];
 
-  const [currentAlbumIndex, setCurrentAlbumIndex] = useState(0);
+  const [currentAlbumIndex, setCurrentAlbumIndex] = useState(() => {
+    if (selectedAlbum) {
+      const index = albums.findIndex(album => album.title === selectedAlbum);
+      return index !== -1 ? index : 0;
+    }
+    return 0;
+  });
 
   const handlePrevAlbum = () => {
     setCurrentAlbumIndex((prev) => (prev === 0 ? albums.length - 1 : prev - 1));
