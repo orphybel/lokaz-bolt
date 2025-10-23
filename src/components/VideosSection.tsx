@@ -1,8 +1,6 @@
-import { useState } from 'react';
-import { X, Play } from 'lucide-react';
+import { Play } from 'lucide-react';
 
 const VideosSection = () => {
-  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
   const videos = [
     {
@@ -37,10 +35,12 @@ const VideosSection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {videos.map((video, index) => (
-            <div
+            <a
               key={index}
-              className="bg-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group"
-              onClick={() => setSelectedVideo(video.videoId)}
+              href={`https://www.youtube.com/watch?v=${video.videoId}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group block"
             >
               <div className="relative aspect-video overflow-hidden">
                 <img
@@ -57,36 +57,10 @@ const VideosSection = () => {
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-100">{video.title}</h3>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
-
-      {selectedVideo && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedVideo(null)}
-        >
-          <div className="relative w-full max-w-4xl" onClick={(e) => e.stopPropagation()}>
-            <button
-              onClick={() => setSelectedVideo(null)}
-              className="absolute -top-12 right-0 text-white hover:text-[#c0392b] transition-colors"
-              aria-label="Fermer"
-            >
-              <X className="h-8 w-8" />
-            </button>
-            <div className="relative pt-[56.25%]">
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1`}
-                title="Vidéo YouTube"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };
