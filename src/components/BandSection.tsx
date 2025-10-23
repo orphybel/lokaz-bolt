@@ -53,7 +53,7 @@ const BandSection = () => {
           </p>
           <p className="text-lg text-gray-300 leading-relaxed">
             De la chanson française aux tubes internationaux, notre répertoire s'adapte à tous les publics et toutes
-            les générations. Que ce soit pour un mariage, un festival, un bal ou une soirée privée, nous mettons
+            les générations. Que ce soit pour un festival, un bal ou une soirée privée, nous mettons
             notre talent et notre expérience au service de votre événement pour créer des moments inoubliables.
           </p>
         </div>
