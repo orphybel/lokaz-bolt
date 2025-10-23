@@ -7,7 +7,7 @@ const PressSection = () => {
       publication: 'Centre Presse Aveyron',
       date: 'Juillet 2023',
       excerpt: 'Le groupe L\'OkaZ a assuré l\'ambiance musicale du bal des pompiers de Rodez devant un public conquis...',
-      link: '#',
+      link: 'https://millavois.com/2024/07/09/le-bal-des-pompiers-cest-le-13-juillet-prochain-place-emma-calve/',
     },
     {
       title: 'Un groupe local qui monte',
