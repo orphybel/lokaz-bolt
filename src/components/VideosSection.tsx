@@ -14,7 +14,7 @@ const VideosSection = () => {
       videoId: 'HBCz8yEM6LM',
     },
     {
-      title: 'Proud Mary',
+      title: 'OkaZ Millau 1 Août 2022 Crazon Espinado',
       thumbnail: 'https://img.youtube.com/vi/tOp3EK7AZbk/maxresdefault.jpg',
       videoId: 'tOp3EK7AZbk',
     },
