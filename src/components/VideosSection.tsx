@@ -4,7 +4,7 @@ const VideosSection = () => {
 
   const videos = [
     {
-      title: 'L'OkaZ Millau 1 Août 2022 Proud Mary',
+      title: 'OkaZ Millau 1 Août 2022 Proud Mary',
       thumbnail: 'https://img.youtube.com/vi/KBiUkjqczRY/maxresdefault.jpg',
       videoId: 'KBiUkjqczRY',
     },
