@@ -74,7 +74,7 @@ const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
       ],
     },
     {
-      title: 'Verrières 2019',
+      title: 'Verrieres 2019',
       photos: [
         '/verrieres 2019-1.avif',
       ],
