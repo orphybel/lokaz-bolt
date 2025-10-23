@@ -23,7 +23,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
         </p>
         <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
           Groupe de musique variété française et internationale basé en Aveyron.
-          Nous animons vos soirées, mariages, festivals et événements avec énergie et passion.
+          Nous animons vos soirées, festivals et événements avec énergie et passion.
         </p>
         <button
           onClick={() => scrollToSection('contact')}
