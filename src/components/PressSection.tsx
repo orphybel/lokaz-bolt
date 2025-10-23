@@ -26,9 +26,9 @@ const PressSection = () => {
   ];
 
   return (
-    <section id="la-presse" className="py-20 bg-gray-50">
+    <section id="la-presse" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-100 mb-4">
           La Presse
         </h2>
         <div className="w-24 h-1 bg-[#c0392b] mx-auto mb-12"></div>
@@ -37,18 +37,18 @@ const PressSection = () => {
           {articles.map((article, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow"
+              className="bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow"
             >
               <div className="flex items-start mb-4">
                 <Newspaper className="h-6 w-6 text-[#c0392b] mr-3 flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{article.title}</h3>
-                  <p className="text-sm text-gray-600">
+                  <h3 className="text-xl font-bold text-gray-100 mb-2">{article.title}</h3>
+                  <p className="text-sm text-gray-400">
                     {article.publication} • {article.date}
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 mb-4">{article.excerpt}</p>
+              <p className="text-gray-300 mb-4">{article.excerpt}</p>
               <a
                 href={article.link}
                 className="inline-flex items-center text-[#c0392b] hover:text-[#a02e23] font-medium transition-colors"

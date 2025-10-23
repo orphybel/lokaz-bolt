@@ -31,7 +31,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <header className="fixed top-0 left-0 right-0 bg-gray-800 shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
@@ -41,13 +41,13 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('le-groupe')}
-              className="text-gray-700 hover:text-[#c0392b] transition-colors font-medium"
+              className="text-gray-200 hover:text-[#c0392b] transition-colors font-medium"
             >
               Le groupe
             </button>
             <button
               onClick={() => scrollToSection('evenements')}
-              className="text-gray-700 hover:text-[#c0392b] transition-colors font-medium"
+              className="text-gray-200 hover:text-[#c0392b] transition-colors font-medium"
             >
               Événements
             </button>
@@ -56,20 +56,20 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
             >
               <button
                 onClick={() => scrollToSection('photos')}
-                className="text-gray-700 hover:text-[#c0392b] transition-colors font-medium flex items-center space-x-1"
+                className="text-gray-200 hover:text-[#c0392b] transition-colors font-medium flex items-center space-x-1"
               >
                 <span>Photos</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
               <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="w-64 bg-white shadow-lg rounded-md py-2 max-h-96 overflow-y-auto">
+                <div className="w-64 bg-gray-700 shadow-lg rounded-md py-2 max-h-96 overflow-y-auto">
                   {photoAlbums.map((album, index) => (
                     <button
                       key={index}
                       onClick={() => {
                         scrollToSection('photos', album);
                       }}
-                      className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#c0392b] transition-colors"
+                      className="block w-full text-left px-4 py-2 text-sm text-gray-200 hover:bg-gray-600 hover:text-[#c0392b] transition-colors"
                     >
                       {album}
                     </button>
@@ -79,13 +79,13 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
             </div>
             <button
               onClick={() => scrollToSection('videos')}
-              className="text-gray-700 hover:text-[#c0392b] transition-colors font-medium"
+              className="text-gray-200 hover:text-[#c0392b] transition-colors font-medium"
             >
               Vidéos
             </button>
             <button
               onClick={() => scrollToSection('la-presse')}
-              className="text-gray-700 hover:text-[#c0392b] transition-colors font-medium"
+              className="text-gray-200 hover:text-[#c0392b] transition-colors font-medium"
             >
               La Presse
             </button>
@@ -98,7 +98,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
           </nav>
 
           <button
-            className="md:hidden text-gray-700 hover:text-[#c0392b] transition-colors"
+            className="md:hidden text-gray-200 hover:text-[#c0392b] transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -107,7 +107,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
+        <div className="md:hidden bg-gray-800 border-t border-gray-700">
           <nav className="px-4 py-4 space-y-3">
             <button
               onClick={() => scrollToSection('le-groupe')}

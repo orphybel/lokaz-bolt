@@ -187,33 +187,33 @@ const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
   const currentAlbum = albums[currentAlbumIndex];
 
   return (
-    <section id="photos" className="py-20 bg-gray-50">
+    <section id="photos" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-100 mb-4">
           Photos
         </h2>
         <div className="w-24 h-1 bg-[#c0392b] mx-auto mb-12"></div>
 
-        <div className="bg-white rounded-lg shadow-lg p-8">
+        <div className="bg-gray-800 rounded-lg shadow-lg p-8">
           <div className="flex items-center justify-between mb-8">
             <button
               onClick={handlePrevAlbum}
-              className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+              className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition-colors"
               aria-label="Album précédent"
             >
-              <ChevronLeft className="h-6 w-6 text-gray-700" />
+              <ChevronLeft className="h-6 w-6 text-gray-200" />
             </button>
 
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center flex-1">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-100 text-center flex-1">
               {currentAlbum.title}
             </h3>
 
             <button
               onClick={handleNextAlbum}
-              className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+              className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition-colors"
               aria-label="Album suivant"
             >
-              <ChevronRight className="h-6 w-6 text-gray-700" />
+              <ChevronRight className="h-6 w-6 text-gray-200" />
             </button>
           </div>
 

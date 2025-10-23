@@ -23,9 +23,9 @@ const EventsSection = () => {
   const sortedYears = Object.keys(eventsByYear).sort((a, b) => Number(b) - Number(a));
 
   return (
-    <section id="evenements" className="py-20 bg-white">
+    <section id="evenements" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-100 mb-4">
           Événements
         </h2>
         <div className="w-24 h-1 bg-[#c0392b] mx-auto mb-12"></div>
@@ -33,7 +33,7 @@ const EventsSection = () => {
         <div className="space-y-12">
           {sortedYears.map((year) => (
             <div key={year}>
-              <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+              <h3 className="text-3xl font-bold text-gray-100 mb-6 flex items-center">
                 <Calendar className="h-8 w-8 text-[#c0392b] mr-3" />
                 {year}
               </h3>
@@ -41,10 +41,10 @@ const EventsSection = () => {
                 {eventsByYear[Number(year)].map((event, index) => (
                   <div
                     key={index}
-                    className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-[#c0392b]"
+                    className="bg-gray-700 rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-[#c0392b]"
                   >
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">{event.title}</h4>
-                    <div className="flex items-center text-gray-600">
+                    <h4 className="text-xl font-bold text-gray-100 mb-3">{event.title}</h4>
+                    <div className="flex items-center text-gray-300">
                       <MapPin className="h-5 w-5 mr-2 text-[#c0392b]" />
                       <span>{event.location}</span>
                     </div>

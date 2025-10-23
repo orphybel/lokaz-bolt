@@ -28,9 +28,9 @@ const VideosSection = () => {
   ];
 
   return (
-    <section id="videos" className="py-20 bg-white">
+    <section id="videos" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-100 mb-4">
           Vidéos
         </h2>
         <div className="w-24 h-1 bg-[#c0392b] mx-auto mb-12"></div>
@@ -39,7 +39,7 @@ const VideosSection = () => {
           {videos.map((video, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group"
+              className="bg-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group"
               onClick={() => setSelectedVideo(video.videoId)}
             >
               <div className="relative aspect-video overflow-hidden">
@@ -55,7 +55,7 @@ const VideosSection = () => {
                 </div>
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-900">{video.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-100">{video.title}</h3>
               </div>
             </div>
           ))}

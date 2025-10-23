@@ -34,19 +34,19 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-100 mb-4">
           Nous contacter
         </h2>
         <div className="w-24 h-1 bg-[#c0392b] mx-auto mb-12"></div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <h3 className="text-2xl font-bold text-gray-100 mb-6">
               Contactez-nous pour vos événements
             </h3>
-            <p className="text-gray-700 mb-8">
+            <p className="text-gray-300 mb-8">
               Vous organisez un mariage, un festival, un bal ou une soirée privée ?
               N'hésitez pas à nous contacter pour discuter de votre projet. Nous serons ravis
               de vous accompagner pour faire de votre événement un moment inoubliable.
@@ -58,7 +58,7 @@ const ContactSection = () => {
                   <Mail className="h-6 w-6 text-[#c0392b]" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
+                  <h4 className="font-semibold text-gray-100 mb-1">Email</h4>
                   <a
                     href="mailto:legroupe@lokaz.net"
                     className="text-[#c0392b] hover:text-[#a02e23] transition-colors"
@@ -73,7 +73,7 @@ const ContactSection = () => {
                   <Phone className="h-6 w-6 text-[#c0392b]" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Téléphone</h4>
+                  <h4 className="font-semibold text-gray-100 mb-1">Téléphone</h4>
                   <a
                     href="tel:+33664913029"
                     className="text-[#c0392b] hover:text-[#a02e23] transition-colors"
@@ -88,7 +88,7 @@ const ContactSection = () => {
                   <Facebook className="h-6 w-6 text-[#c0392b]" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Facebook</h4>
+                  <h4 className="font-semibold text-gray-100 mb-1">Facebook</h4>
                   <a
                     href="https://facebook.com"
                     target="_blank"
@@ -102,8 +102,8 @@ const ContactSection = () => {
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Envoyez-nous un message</h3>
+          <div className="bg-gray-700 rounded-lg p-8">
+            <h3 className="text-2xl font-bold text-gray-100 mb-6">Envoyez-nous un message</h3>
 
             {submitMessage && (
               <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
@@ -113,7 +113,7 @@ const ContactSection = () => {
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-200 mb-2">
                   Nom
                 </label>
                 <input
@@ -123,12 +123,12 @@ const ContactSection = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#c0392b] focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-gray-600 rounded-md focus:ring-2 focus:ring-[#c0392b] focus:border-transparent outline-none transition-all bg-gray-800 text-gray-100"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-200 mb-2">
                   Email
                 </label>
                 <input
@@ -138,12 +138,12 @@ const ContactSection = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#c0392b] focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-gray-600 rounded-md focus:ring-2 focus:ring-[#c0392b] focus:border-transparent outline-none transition-all bg-gray-800 text-gray-100"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-200 mb-2">
                   Message
                 </label>
                 <textarea
@@ -153,7 +153,7 @@ const ContactSection = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#c0392b] focus:border-transparent outline-none transition-all resize-none"
+                  className="w-full px-4 py-3 border border-gray-600 rounded-md focus:ring-2 focus:ring-[#c0392b] focus:border-transparent outline-none transition-all resize-none bg-gray-800 text-gray-100"
                 ></textarea>
               </div>
 
