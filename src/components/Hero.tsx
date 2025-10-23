@@ -15,13 +15,13 @@ const Hero = ({ scrollToSection }: HeroProps) => {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 opacity-0">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
           L'OkaZ
         </h1>
-        <p className="text-xl md:text-2xl mb-4 opacity-0">
+        <p className="text-xl md:text-2xl mb-4">
           Valentine, Pier-O, Laurent, Teddy et PH
         </p>
-        <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-0">
+        <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
           Groupe de musique variété française et internationale basé en Aveyron.
           Nous animons vos soirées, festivals et événements avec énergie et passion.
         </p>
