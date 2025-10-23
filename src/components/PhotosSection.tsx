@@ -8,39 +8,153 @@ interface PhotosSectionProps {
 const PhotosSection = ({ onImageClick }: PhotosSectionProps) => {
   const albums = [
     {
+      title: 'Tour de France 2018',
+      photos: [
+        '/Tour de France 2018-1.avif',
+        '/Tour de France 2018-2.avif',
+        '/Tour de France 2018-3.avif',
+        '/Tour de France 2018-4.avif',
+        '/Tour de France 2018-5.avif',
+        '/Tour de France 2018-6.avif',
+      ],
+    },
+    {
+      title: 'Roq\'N Brebis 2018',
+      photos: [
+        '/Roq\'N Brebis 2018-1.avif',
+        '/Roq\'N Brebis 2018-2.avif',
+      ],
+    },
+    {
+      title: 'Fête de la Musique 2019',
+      photos: [
+        '/Fete de la musique 2019-1.avif',
+        '/Fete de la musique 2019-2.avif',
+        '/Fete de la musique 2019-3.avif',
+        '/Fete de la musique 2019-4.avif',
+        '/Fete de la musique 2019-5.avif',
+        '/Fete de la musique 2019-6.avif',
+        '/Fete de la musique 2019-7.avif',
+      ],
+    },
+    {
+      title: 'Compregnac 2019',
+      photos: [
+        '/Compregnac 2019-1.avif',
+        '/Compregnac 2019-2.avif',
+        '/Compregnac 2019-3.avif',
+        '/Compregnac 2019-4.avif',
+        '/Compregnac 2019-5.avif',
+      ],
+    },
+    {
+      title: 'Flavin 2019',
+      photos: [
+        '/Flavin 2019-1.avif',
+        '/Flavin 2019-2.avif',
+        '/Flavin 2019-3.avif',
+      ],
+    },
+    {
+      title: 'Lapanouse de Cernon 2019',
+      photos: [
+        '/Lapanouse de Cernon 2019-1.avif',
+        '/Lapanouse de Cernon 2019-2.avif',
+        '/Lapanouse de Cernon 2019-3.avif',
+        '/Lapanouse de Cernon 2019-4.avif',
+        '/Lapanouse de Cernon 2019-5.avif',
+      ],
+    },
+    {
+      title: 'St Rome de Cernon 2019',
+      photos: [
+        '/St Rome de Cernon 2019-1.avif',
+        '/St Rome de Cernon 2019-2.avif',
+        '/St Rome de Cernon 2019-3.avif',
+        '/St Rome de Cernon 2019-4.avif',
+        '/St Rome de Cernon 2019-5.avif',
+        '/St Rome de Cernon 2019-6.avif',
+        '/St Rome de Cernon 2019-7.avif',
+      ],
+    },
+    {
+      title: 'Verrières 2019',
+      photos: [
+        '/verrieres 2019-1.avif',
+      ],
+    },
+    {
+      title: 'Fête de la Musique 2020',
+      photos: [
+        '/Fete de la Musqiue 2020-1.avif',
+        '/Fete de la Musqiue 2020-2.avif',
+        '/Fete de la Musqiue 2020-3.avif',
+      ],
+    },
+    {
+      title: 'Marché Gourmand Millau 2020',
+      photos: [
+        '/Marché Gourmand Millau 20202-1.avif',
+        '/Marché Gourmand Millau 20202-2.avif',
+      ],
+    },
+    {
+      title: 'Okfé Millau 2022',
+      photos: [
+        '/Okfé Millau 2022-1.avif',
+        '/Okfé Millau 2022-2.avif',
+      ],
+    },
+    {
       title: 'Bal des Pompiers 2023',
       photos: [
+        '/Bal des Pompiers 2023-1.avif',
+        '/Bal des Pompiers 2023-2.avif',
         '/Bal-pompiers-millau-lokaz-1.avif',
-        'https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/1916821/pexels-photo-1916821.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/1389429/pexels-photo-1389429.jpeg?auto=compress&cs=tinysrgb&w=800',
       ],
     },
     {
-      title: 'Marché Gourmand à Millau 2022',
+      title: 'Fête de la Musique 2024',
       photos: [
-        'https://images.pexels.com/photos/1267697/pexels-photo-1267697.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/1047442/pexels-photo-1047442.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/1481308/pexels-photo-1481308.jpeg?auto=compress&cs=tinysrgb&w=800',
+        '/Fete de la Musique 2024-1.jpeg',
+        '/Fete de la Musique Millau 2024-2.jpg',
+        '/Fete de la Musique 2024-3.jpeg',
+        '/Fete de la Musique 2024-4.jpeg',
+        '/Fete de la Musique 2024-5.jpeg',
+        '/Fete de la Musique 2024-6.jpeg',
+        '/Fete de la Musique 2024-7.jpeg',
       ],
     },
     {
-      title: 'Festival d\'été 2022',
+      title: 'Bal des Pompiers 2024',
       photos: [
-        'https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/2114365/pexels-photo-2114365.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/1677710/pexels-photo-1677710.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=800',
+        '/Bal des Pompiers 2024-1.jpeg',
+        '/Bal des Pompiers 2024-2.jpeg',
+        '/Bal des Pompiers 2024-3.jpeg',
       ],
     },
     {
-      title: 'Concert de Noël 2021',
+      title: 'Fête de la Musique 2025',
       photos: [
-        'https://images.pexels.com/photos/1820563/pexels-photo-1820563.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/1763067/pexels-photo-1763067.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/1564506/pexels-photo-1564506.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/1449791/pexels-photo-1449791.jpeg?auto=compress&cs=tinysrgb&w=800',
+        '/Fete de la Musique 2025-1.jpeg',
+        '/Fete de la Musique 2025-2.jpeg',
+      ],
+    },
+    {
+      title: 'Laissac 2025',
+      photos: [
+        '/Laissac 2025-1.jpeg',
+        '/Laissac 2025-2.jpeg',
+        '/Laissac 2025-3.jpeg',
+        '/Laissac 2025-4.jpeg',
+      ],
+    },
+    {
+      title: 'Le Glacier Saint Affrique',
+      photos: [
+        '/Le Glacier Saint Affrique-1.avif',
+        '/Le Glacier Saint Affrique-2.avif',
+        '/Le Glacier Saint Affrique-3.avif',
       ],
     },
   ];
