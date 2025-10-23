@@ -17,6 +17,14 @@ const BandSection = () => {
         </h2>
         <div className="w-24 h-1 bg-[#c0392b] mx-auto mb-12"></div>
 
+        <div className="mb-12 flex justify-center">
+          <img
+            src="/Lokaz tetes.avif"
+            alt="Les 5 musiciens du groupe L'OkaZ"
+            className="rounded-lg shadow-lg max-w-full h-auto"
+          />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {members.map((member, index) => {
             const Icon = member.icon;
