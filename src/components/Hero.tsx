@@ -6,9 +6,10 @@ const Hero = ({ scrollToSection }: HeroProps) => {
   return (
     <section className="relative h-screen flex items-center justify-center text-white">
       <div
-        className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+        className="absolute inset-0 bg-center bg-no-repeat"
         style={{
           backgroundImage: 'url(/Affiche_groupe_foule.png)',
+          backgroundSize: '110%',
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
