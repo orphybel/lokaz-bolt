@@ -25,21 +25,21 @@ const BandSection = () => {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-5 md:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-8 mb-12">
           {members.map((member, index) => {
             const Icon = member.icon;
             return (
               <div
                 key={index}
-                className="bg-gray-800 rounded-lg shadow-md p-6 text-center hover:shadow-xl transition-shadow"
+                className="bg-gray-800 rounded-lg shadow-md p-2 md:p-6 text-center hover:shadow-xl transition-shadow"
               >
-                <div className="flex justify-center mb-4">
-                  <div className="bg-[#c0392b] bg-opacity-10 p-4 rounded-full">
-                    <Icon className="h-12 w-12 text-[#c0392b]" />
+                <div className="flex justify-center mb-1 md:mb-4">
+                  <div className="bg-[#c0392b] bg-opacity-10 p-2 md:p-4 rounded-full">
+                    <Icon className="h-6 w-6 md:h-12 md:w-12 text-[#c0392b]" />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-100 mb-2">{member.name}</h3>
-                <p className="text-gray-300">{member.role}</p>
+                <h3 className="text-xs md:text-xl font-bold text-gray-100 mb-0 md:mb-2">{member.name}</h3>
+                <p className="text-[10px] md:text-base text-gray-300">{member.role}</p>
               </div>
             );
           })}
