@@ -24,7 +24,7 @@ const PressSection = () => {
       link: '#',
     },
      {
-      title: '-15 Janvier 2019 - Comprégnac,Le rigodon.',
+      title: 'Comprégnac,Le rigodon.',
       publication: 'Millavois',
       date: 'Juin 2022',
       excerpt: 'ce sera l’Okaz de venir danser...',
