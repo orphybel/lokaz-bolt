@@ -27,7 +27,7 @@ const PressSection = () => {
       title: 'Comprégnac,Le rigodon.',
       publication: 'Millavois',
       date: 'Juin 2022',
-      excerpt: 'ce sera l’Okaz de venir danser...',
+      excerpt: 'Ce sera l’Okaz de venir danser...',
       link: 'https://millavois.com/2019/01/15/compregnac-le-rigodon-de-la-saint-cochon/',
     },
   ];
