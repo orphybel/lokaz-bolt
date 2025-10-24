@@ -23,7 +23,7 @@ const BandSection = () => {
           src="/Lokaz tetes.avif"
           alt="Les 5 musiciens du groupe L'OkaZ"
           className="rounded-none sm:rounded-lg shadow-lg w-full h-auto object-contain"
-          style={{ maxHeight: '200px' }}
+          style={{ maxHeight: '500px' }}
         />
       </div>
 
