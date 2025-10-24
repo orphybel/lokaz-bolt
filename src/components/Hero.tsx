@@ -11,7 +11,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
           backgroundImage: 'url(/Affiche_groupe_foule.png)',
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center mt-auto mb-16">
