@@ -17,11 +17,11 @@ const BandSection = () => {
         </h2>
         <div className="w-24 h-1 bg-[#c0392b] mx-auto mb-12"></div>
 
-        <div className="mb-12 flex justify-center">
+        <div className="mb-12 -mx-0 sm:mx-0">
           <img
             src="/Lokaz tetes.avif"
             alt="Les 5 musiciens du groupe L'OkaZ"
-            className="rounded-none sm:rounded-lg shadow-lg w-full sm:max-w-full h-auto"
+            className="rounded-none sm:rounded-lg shadow-lg w-full h-auto object-cover"
           />
         </div>
 
