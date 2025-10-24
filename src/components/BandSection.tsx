@@ -18,11 +18,12 @@ const BandSection = () => {
         <div className="w-24 h-1 bg-[#c0392b] mx-auto mb-12"></div>
       </div>
 
-      <div className="mb-12 max-w-7xl mx-auto px-0 sm:px-6 lg:px-8">
+      <div className="mb-12 max-w-7xl mx-auto px-0 sm:px-6 lg:px-8 overflow-hidden">
         <img
           src="/Lokaz tetes.avif"
           alt="Les 5 musiciens du groupe L'OkaZ"
-          className="rounded-none sm:rounded-lg shadow-lg w-full h-auto"
+          className="rounded-none sm:rounded-lg shadow-lg w-full h-auto object-contain"
+          style={{ maxHeight: '500px' }}
         />
       </div>
 
