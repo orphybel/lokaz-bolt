@@ -109,31 +109,31 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
           <nav className="px-4 py-4 space-y-3">
             <button
               onClick={() => scrollToSection('le-groupe')}
-              className="block w-full text-left text-gray-700 hover:text-[#c0392b] transition-colors font-medium py-2"
+              className="block w-full text-left text-gray-200 hover:text-[#c0392b] transition-colors font-medium py-2"
             >
               Le groupe
             </button>
             <button
               onClick={() => scrollToSection('evenements')}
-              className="block w-full text-left text-gray-700 hover:text-[#c0392b] transition-colors font-medium py-2"
+              className="block w-full text-left text-gray-200 hover:text-[#c0392b] transition-colors font-medium py-2"
             >
               Événements
             </button>
             <button
               onClick={() => scrollToSection('photos')}
-              className="block w-full text-left text-gray-700 hover:text-[#c0392b] transition-colors font-medium py-2"
+              className="block w-full text-left text-gray-200 hover:text-[#c0392b] transition-colors font-medium py-2"
             >
               Photos
             </button>
             <button
               onClick={() => scrollToSection('videos')}
-              className="block w-full text-left text-gray-700 hover:text-[#c0392b] transition-colors font-medium py-2"
+              className="block w-full text-left text-gray-200 hover:text-[#c0392b] transition-colors font-medium py-2"
             >
               Vidéos
             </button>
             <button
               onClick={() => scrollToSection('la-presse')}
-              className="block w-full text-left text-gray-700 hover:text-[#c0392b] transition-colors font-medium py-2"
+              className="block w-full text-left text-gray-200 hover:text-[#c0392b] transition-colors font-medium py-2"
             >
               La Presse
             </button>
