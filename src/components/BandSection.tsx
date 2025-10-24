@@ -11,8 +11,8 @@ const BandSection = () => {
 
   return (
     <section id="le-groupe" className="py-20 bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-100 mb-4">
+      <div className="max-w-7xl mx-auto px-0 sm:px-4 lg:px-8">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-100 mb-4 px-4">
           Le groupe
         </h2>
         <div className="w-24 h-1 bg-[#c0392b] mx-auto mb-12"></div>
@@ -21,11 +21,11 @@ const BandSection = () => {
           <img
             src="/Lokaz tetes.avif"
             alt="Les 5 musiciens du groupe L'OkaZ"
-            className="rounded-lg shadow-lg max-w-full h-auto"
+            className="rounded-none sm:rounded-lg shadow-lg w-full sm:max-w-full h-auto"
           />
         </div>
 
-        <div className="grid grid-cols-5 md:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-8 mb-12">
+        <div className="grid grid-cols-5 md:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-8 mb-12 px-4">
           {members.map((member, index) => {
             const Icon = member.icon;
             return (
@@ -45,7 +45,7 @@ const BandSection = () => {
           })}
         </div>
 
-        <div className="bg-gray-800 rounded-lg shadow-md p-8 md:p-12">
+        <div className="bg-gray-800 rounded-lg shadow-md p-8 md:p-12 mx-4">
           <p className="text-lg text-gray-300 leading-relaxed mb-6">
             L'OkaZ est un groupe de musique varié qui propose un répertoire riche mêlant les plus grands succès
             de la variété française et internationale. Avec une énergie communicative et une passion pour la scène,
