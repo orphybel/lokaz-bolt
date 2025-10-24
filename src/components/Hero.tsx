@@ -15,7 +15,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 text-center flex flex-col justify-end h-full pb-16">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 text-center flex flex-col justify-start h-full pt-16">
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3">
           L'OkaZ
         </h1>
