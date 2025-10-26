@@ -16,19 +16,19 @@ const Hero = ({ scrollToSection }: HeroProps) => {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center mt-auto mb-16">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+        <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6">
           L'OkaZ
         </h1>
-        <p className="text-xl md:text-2xl mb-4">
+        <p className="text-base md:text-2xl mb-3 md:mb-4">
           Valentine, Pier-O, Laurent, Teddy et PH
         </p>
-        <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+        <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-2xl mx-auto">
           Groupe de musique variété française et internationale basé en Aveyron.
           Nous animons vos soirées, festivals et événements avec énergie et passion.
         </p>
         <button
           onClick={() => scrollToSection('contact')}
-          className="bg-[#c0392b] text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-[#a02e23] transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+          className="bg-[#c0392b] text-white px-6 py-3 md:px-8 md:py-4 rounded-md text-base md:text-lg font-semibold hover:bg-[#a02e23] transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
         >
           Nous contacter
         </button>
