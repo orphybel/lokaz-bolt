@@ -6,7 +6,7 @@ const PressSection = () => {
       title: 'L\'OkaZ fait danser le bal des pompiers',
       publication: 'Centre Presse Aveyron',
       date: 'Juillet 2023',
-      excerpt: 'Le groupe L\'OkaZ a assuré l\'ambiance musicale du bal des pompiers de Rodez devant un public conquis...',
+      excerpt: 'Le groupe L\'OkaZ a assuré l\'ambiance musicale du bal des pompiers de Millau devant un public conquis...',
       link: 'https://millavois.com/2024/07/09/le-bal-des-pompiers-cest-le-13-juillet-prochain-place-emma-calve/',
     },
     {
