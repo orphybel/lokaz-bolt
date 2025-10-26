@@ -16,9 +16,11 @@ const Hero = ({ scrollToSection }: HeroProps) => {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center mt-auto mb-16">
-        <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6">
-          L'OkaZ
-        </h1>
+        <img
+          src="/logo-okaz-transparent copy.png"
+          alt="L'OkaZ"
+          className="h-20 md:h-32 lg:h-40 mx-auto mb-4 md:mb-6"
+        />
         <p className="text-base md:text-2xl mb-3 md:mb-4">
           Valentine, Pier-O, Laurent, Teddy et PH
         </p>
