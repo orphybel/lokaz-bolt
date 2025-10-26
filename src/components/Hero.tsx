@@ -4,7 +4,7 @@ interface HeroProps {
 
 const Hero = ({ scrollToSection }: HeroProps) => {
   return (
-    <section className="relative h-screen flex items-center justify-center text-white">
+    <section className="relative h-screen md:h-screen h-[70vh] flex items-center justify-center text-white">
       <div
         className="absolute inset-0 bg-center bg-no-repeat"
         style={{
