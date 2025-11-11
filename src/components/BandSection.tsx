@@ -19,7 +19,7 @@ const BandSection = () => {
 
         <div className="mb-12 flex justify-center">
           <img
-            src="/Lokaz tetes.avif"
+            src="/Lokaz_tetes.avif"
             alt="Les 5 musiciens du groupe L'OkaZ"
             className="rounded-lg shadow-lg max-w-full h-auto"
           />
