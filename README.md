@@ -1,2 +1,1 @@
-# lokaz
-site web
+lokaz-bolt

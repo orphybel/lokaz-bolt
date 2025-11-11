@@ -17,7 +17,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center mt-auto mb-16">
         <img
-          src="/logo-okaz-transparent_copy.png"
+          src="/logo-okaz-transparent copy.png"
           alt="L'OkaZ"
           className="h-20 md:h-32 lg:h-40 mx-auto mb-4 md:mb-6"
         />
