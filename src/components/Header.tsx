@@ -34,7 +34,9 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
     <header className="fixed top-0 left-0 right-0 bg-gray-800 shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div></div>
+          <div className="flex items-center">
+            <img src="/logo-okaz-transparent.png" alt="L'OkaZ" className="h-10" />
+          </div>
 
           <nav className="hidden md:flex items-center space-x-8">
             <button
