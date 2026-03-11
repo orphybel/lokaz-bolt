@@ -1,4 +1,4 @@
-import { Mail, Phone, Facebook } from 'lucide-react';
+import { Mail, Facebook } from 'lucide-react';
 
 const ContactSection = () => {
   return (
@@ -31,21 +31,6 @@ const ContactSection = () => {
                   className="text-[#c0392b] hover:text-[#a02e23] transition-colors"
                 >
                   legroupe@lokaz.net
-                </a>
-              </div>
-            </div>
-
-            <div className="flex items-start">
-              <div className="bg-[#c0392b] bg-opacity-10 p-3 rounded-full mr-4">
-                <Phone className="h-6 w-6 text-[#c0392b]" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-100 mb-1">Téléphone</h4>
-                <a
-                  href="tel:+33664913029"
-                  className="text-[#c0392b] hover:text-[#a02e23] transition-colors"
-                >
-                  06.64.91.30.29
                 </a>
               </div>
             </div>
