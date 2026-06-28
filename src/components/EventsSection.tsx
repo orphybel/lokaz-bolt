@@ -3,6 +3,13 @@ import { Calendar, MapPin, Clock } from 'lucide-react';
 const EventsSection = () => {
   const events = [
     {
+      date: '14 Juillet',
+      title: 'Marchés gourmands / nocturnes des fermiers de l\'Aveyron',
+      location: 'Place du Mandarous à Millau',
+      time: '20h30',
+      year: 2026
+    },
+    {
       date: '21 Juin',
       title: 'Fête de la Musique',
       location: 'Le Bouche à Oreille (BO) à Millau',
