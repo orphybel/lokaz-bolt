@@ -2,52 +2,101 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="L'OkaZ - Groupe de musique variété française et internationale basé en Aveyron. festivals, bals et soirées privées." />
-    <meta name="keywords" content="groupe musique, aveyron, millau, variété française, musique live, événements, festivals, bals, soirées privées, animation musicale" />
+    <title>L'OkaZ — Groupe de musique variété en Aveyron (Millau)</title>
+    <meta name="description" content="L'OkaZ, groupe de musique variété française et internationale basé en Aveyron. Bals, festivals, fêtes de village et soirées privées à Millau, Saint-Affrique et alentours." />
     <meta name="author" content="L'OkaZ" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.lokaz.net/" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://lokaz.net/" />
 
-    <!-- Open Graph / Facebook -->
+    <link rel="icon" type="image/png" href="/logo-okaz-transparent.png" />
+    <link rel="apple-touch-icon" href="/logo-okaz-transparent.png" />
+    <meta name="theme-color" content="#111827" />
+
+    <link rel="preload" as="image" href="/Affiche_groupe_foule.webp" fetchpriority="high" />
+
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.lokaz.net/" />
-    <meta property="og:title" content="L'OkaZ — Groupe de musique Aveyron" />
-    <meta property="og:description" content="Groupe de musique variété française et internationale. Disponible pour festivals, bals et soirées privées en Aveyron." />
-    <meta property="og:image" content="https://www.lokaz.net/logo-okaz-transparent.png" />
+    <meta property="og:site_name" content="L'OkaZ" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:url" content="https://lokaz.net/" />
+    <meta property="og:title" content="L'OkaZ — Groupe de musique variété en Aveyron (Millau)" />
+    <meta property="og:description" content="Groupe de musique variété française et internationale. Bals, festivals et soirées privées en Aveyron." />
+    <meta property="og:image" content="https://lokaz.net/logo-okaz-transparent.png" />
+    <meta property="og:image:alt" content="Logo du groupe L'OkaZ" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://www.lokaz.net/" />
-    <meta property="twitter:title" content="L'OkaZ — Groupe de musique Aveyron" />
-    <meta property="twitter:description" content="Groupe de musique variété française et internationale. Disponible pour festivals, bals et soirées privées en Aveyron." />
-    <meta property="twitter:image" content="https://www.lokaz.net/logo-okaz-transparent.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="L'OkaZ — Groupe de musique variété en Aveyron (Millau)" />
+    <meta name="twitter:description" content="Groupe de musique variété française et internationale. Bals, festivals et soirées privées en Aveyron." />
+    <meta name="twitter:image" content="https://lokaz.net/logo-okaz-transparent.png" />
 
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MusicGroup",
-      "name": "L'OkaZ",
-      "url": "https://www.lokaz.net",
-      "logo": "https://www.lokaz.net/logo-okaz-transparent.png",
-      "description": "Groupe de musique variété française et internationale basé en Aveyron",
-      "genre": ["Variété française", "Variété internationale"],
-      "email": "legroupe@lokaz.net",
-      "telephone": "+33664913029",
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "Aveyron",
-        "addressCountry": "FR"
-      },
-      "sameAs": [
-        "https://facebook.com"
+      "@graph": [
+        {
+          "@type": "MusicGroup",
+          "@id": "https://lokaz.net/#groupe",
+          "name": "L'OkaZ",
+          "alternateName": "Groupe L'OkaZ",
+          "url": "https://lokaz.net/",
+          "logo": "https://lokaz.net/logo-okaz-transparent.png",
+          "image": "https://lokaz.net/logo-okaz-transparent.png",
+          "description": "Groupe de musique variété française et internationale basé en Aveyron. Bals, festivals, fêtes de village et soirées privées.",
+          "genre": ["Variété française", "Variété internationale", "Pop rock"],
+          "email": "legroupe@lokaz.net",
+          "telephone": "+33664913029",
+          "foundingLocation": { "@type": "Place", "name": "Aveyron, France" },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Millau",
+            "addressRegion": "Aveyron",
+            "postalCode": "12100",
+            "addressCountry": "FR"
+          },
+          "areaServed": [
+            { "@type": "AdministrativeArea", "name": "Aveyron" },
+            { "@type": "AdministrativeArea", "name": "Occitanie" }
+          ],
+          "member": [
+            { "@type": "Person", "name": "Valentine" },
+            { "@type": "Person", "name": "Pier-O" },
+            { "@type": "Person", "name": "Laurent" },
+            { "@type": "Person", "name": "Teddy" },
+            { "@type": "Person", "name": "PH" }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://lokaz.net/#site",
+          "url": "https://lokaz.net/",
+          "name": "L'OkaZ",
+          "inLanguage": "fr-FR",
+          "publisher": { "@id": "https://lokaz.net/#groupe" }
+        },
+        {
+          "@type": "MusicEvent",
+          "name": "Marches gourmands / nocturnes des fermiers de l'Aveyron",
+          "startDate": "2026-07-14T20:30:00+02:00",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "location": {
+            "@type": "Place",
+            "name": "Place du Mandarous",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Place du Mandarous",
+              "addressLocality": "Millau",
+              "postalCode": "12100",
+              "addressCountry": "FR"
+            }
+          },
+          "performer": { "@id": "https://lokaz.net/#groupe" },
+          "organizer": { "@id": "https://lokaz.net/#groupe" },
+          "image": "https://lokaz.net/logo-okaz-transparent.png"
+        }
       ]
     }
     </script>
-
-    <title>L'OkaZ — Groupe de musique Aveyron</title>
   </head>
   <body>
     <div id="root"></div>
