@@ -1,5 +1,4 @@
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { useState } from 'react';
 
 interface HeaderProps {
   isMenuOpen: boolean;
@@ -8,7 +7,6 @@ interface HeaderProps {
 }
 
 const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => {
-  const [showPhotosSubmenu, setShowPhotosSubmenu] = useState(false);
 
   const photoAlbums = [
     'Laissac 2025',

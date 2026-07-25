@@ -1,4 +1,4 @@
-import { Mic, Drum, Piano, Guitar, Music } from 'lucide-react';
+import { Mic, Drum, Piano, Guitar } from 'lucide-react';
 
 const BandSection = () => {
   const members = [

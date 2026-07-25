@@ -1,11 +1,7 @@
-# robots.txt for L'OkaZ - Groupe de musique
+# robots.txt for L'OkaZ - Groupe de musique Aveyron
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 
-# Sitemap
-Sitemap: https://www.lokaz.net/sitemap.xml
-
-# Crawl-delay for polite crawling
-Crawl-delay: 1
+Sitemap: https://lokaz.net/sitemap.xml

@@ -4,11 +4,11 @@ interface HeroProps {
 
 const Hero = ({ scrollToSection }: HeroProps) => {
   return (
-    <section className="relative h-screen md:h-screen h-[70vh] flex items-center justify-center text-white">
+    <section className="relative h-[70vh] md:h-screen flex items-center justify-center text-white">
       <div
         className="absolute inset-0 bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/Affiche_groupe_foule.png)',
+          backgroundImage: 'url(/Affiche_groupe_foule.webp)',
           backgroundSize: '300%',
         }}
       >
@@ -16,11 +16,18 @@ const Hero = ({ scrollToSection }: HeroProps) => {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center mt-auto mb-16">
-        <img
-          src="/logo-okaz-transparent copy.png"
-          alt="L'OkaZ"
-          className="h-20 md:h-32 lg:h-40 mx-auto mb-4 md:mb-6"
-        />
+        <h1 className="mb-4 md:mb-6">
+          <img
+            src="/logo-okaz-transparent.png"
+            alt="L'OkaZ"
+            width={640}
+            height={240}
+            className="h-20 md:h-32 lg:h-40 w-auto mx-auto"
+          />
+          <span className="sr-only">
+            L'OkaZ — groupe de musique variété française et internationale en Aveyron
+          </span>
+        </h1>
         <p className="text-base md:text-2xl mb-3 md:mb-4">
           Valentine, Pier-O, Laurent, Teddy et PH
         </p>
@@ -30,7 +37,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
         </p>
         <button
           onClick={() => scrollToSection('contact')}
-          className="bg-[#c0392b] text-white px-6 py-3 md:px-8 md:py-4 rounded-md text-base md:text-lg font-semibold hover:bg-[#a02e23] transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+          className="bg-[#c0392b] text-white px-6 py-3 md:px-8 md:py-4 rounded-md text-base md:text-lg font-semibold hover:bg-[#a02e23] shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
         >
           Nous contacter
         </button>
