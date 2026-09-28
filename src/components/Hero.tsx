@@ -5,6 +5,8 @@ interface HeroProps {
   scrollToSection: (id: string) => void;
 }
 
+const STRIP_ITEMS = ['FESTIVALS', 'BALS', 'SOIRÉES PRIVÉES', 'LIVE & ENSEMBLE'];
+
 const prefersReducedMotion = () =>
   typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -100,17 +102,25 @@ const Hero = ({ scrollToSection }: HeroProps) => {
         </div>
       </div>
 
-      <div
-        className="flex justify-start gap-6 overflow-hidden whitespace-nowrap bg-acid px-6 py-[18px] font-display text-xl text-ink md:justify-around md:text-[clamp(1.125rem,2.7vw,2rem)]"
-        aria-hidden="true"
-      >
-        <span>FESTIVALS</span>
-        <span>✳</span>
-        <span>BALS</span>
-        <span>✳</span>
-        <span>SOIRÉES PRIVÉES</span>
-        <span>✳</span>
-        <span>LIVE &amp; ENSEMBLE</span>
+      {/* Bandeau défilant : deux moitiés identiques, l'animation décale de -50 % pour boucler sans saut. */}
+      <div className="overflow-hidden bg-acid py-[18px] text-ink" aria-hidden="true">
+        <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
+          {[0, 1].map((half) => (
+            <div key={half} className="flex shrink-0">
+              {[0, 1, 2].map((repeat) =>
+                STRIP_ITEMS.map((item) => (
+                  <span
+                    key={`${repeat}-${item}`}
+                    className="flex items-center gap-6 whitespace-nowrap pr-6 font-display text-xl md:text-[2rem]"
+                  >
+                    {item}
+                    <span>✳</span>
+                  </span>
+                ))
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
