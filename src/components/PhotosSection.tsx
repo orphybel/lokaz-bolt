@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import SectionTitle from './SectionTitle';
 
 interface PhotosSectionProps {
   onImageClick: (imageUrl: string) => void;
@@ -187,37 +188,34 @@ const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
   const currentAlbum = albums[currentAlbumIndex];
 
   return (
-    <section id="photos" className="content-section py-20 bg-gray-900">
+    <section id="photos" className="border-b border-white/15 bg-ink py-[60px] md:py-[90px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-100 mb-4">
-          Photos
-        </h2>
-        <div className="w-24 h-1 bg-[#c0392b] mx-auto mb-12"></div>
+        <SectionTitle className="text-pink">Photos</SectionTitle>
 
-        <div className="bg-gray-800 rounded-lg shadow-lg p-8">
+        <div>
           <div className="flex items-center justify-between mb-8">
             <button
               onClick={handlePrevAlbum}
-              className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition-colors"
+              className="rounded-full bg-[#252525] p-2 transition-colors hover:bg-[#333]"
               aria-label="Album précédent"
             >
               <ChevronLeft className="h-6 w-6 text-gray-200" />
             </button>
 
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-100 text-center flex-1">
+            <h3 className="flex-1 px-2.5 text-center text-xl font-bold text-gray-100 md:text-3xl">
               {currentAlbum.title}
             </h3>
 
             <button
               onClick={handleNextAlbum}
-              className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition-colors"
+              className="rounded-full bg-[#252525] p-2 transition-colors hover:bg-[#333]"
               aria-label="Album suivant"
             >
               <ChevronRight className="h-6 w-6 text-gray-200" />
             </button>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+          <div className="mb-6 grid grid-cols-2 gap-2.5 sm:gap-4 lg:grid-cols-4">
             {currentAlbum.photos.map((photo, index) => (
               <div
                 key={index}
@@ -225,7 +223,7 @@ const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
                 tabIndex={0}
                 aria-label={`Agrandir ${currentAlbum.title}, photo ${index + 1}`}
                 onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onImageClick(photo); } }}
-                className="relative aspect-square overflow-hidden rounded-lg cursor-pointer group"
+                className="group relative aspect-[3/4] cursor-pointer overflow-hidden"
                 onClick={() => onImageClick(photo)}
               >
                 <img
@@ -240,15 +238,15 @@ const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
             ))}
           </div>
 
-          <div className="flex justify-center space-x-2">
+          <div className="flex flex-wrap justify-center gap-2.5">
             {albums.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentAlbumIndex(index)}
-                className={`h-2 rounded-full transition-all ${
+                className={`h-3.5 rounded-full transition-all ${
                   index === currentAlbumIndex
-                    ? 'w-8 bg-[#c0392b]'
-                    : 'w-2 bg-gray-300 hover:bg-gray-400'
+                    ? 'w-8 bg-pink'
+                    : 'w-3.5 bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label={`Aller à l'album ${index + 1}`}
               />
