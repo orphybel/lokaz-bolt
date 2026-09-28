@@ -10,15 +10,9 @@ const Footer = () => {
           </div>
 
           <div className="text-center md:text-right">
-            <p className="text-gray-400 mb-2">
+            <p className="text-gray-400">
               © {currentYear} L'OkaZ. Tous droits réservés.
             </p>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-white transition-colors text-sm"
-            >
-              Mentions légales
-            </a>
           </div>
         </div>
 
