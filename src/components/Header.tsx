@@ -29,10 +29,10 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-gray-800 shadow-md z-50">
+    <header className="site-header fixed top-0 left-0 right-0 bg-gray-800 shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div></div>
+          <a href="#accueil" className="header-brand" aria-label="L’OkaZ, accueil">L’OkaZ<span>LIVE</span></a>
 
           <nav className="hidden md:flex items-center space-x-8">
             <button
@@ -57,7 +57,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
                 <span>Photos</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
-              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200">
                 <div className="w-64 bg-gray-700 shadow-lg rounded-md py-2 max-h-96 overflow-y-auto">
                   {photoAlbums.map((album, index) => (
                     <button
@@ -94,6 +94,8 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
           </nav>
 
           <button
+            aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={isMenuOpen}
             className="md:hidden text-gray-200 hover:text-[#c0392b] transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >

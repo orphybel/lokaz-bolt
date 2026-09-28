@@ -1,49 +1,26 @@
-interface HeroProps {
-  scrollToSection: (id: string) => void;
-}
-
-const Hero = ({ scrollToSection }: HeroProps) => {
-  return (
-    <section className="relative h-[70vh] md:h-screen flex items-center justify-center text-white">
-      <div
-        className="absolute inset-0 bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'url(/Affiche_groupe_foule.webp)',
-          backgroundSize: '300%',
-        }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+import { ArrowDown, ArrowUpRight, Play } from 'lucide-react';
+interface HeroProps { scrollToSection: (id: string) => void; }
+const Hero = ({ scrollToSection }: HeroProps) => (
+  <section className="concert-hero" id="accueil">
+    <div className="hero-topline"><span>VARIÉTÉ FRANÇAISE & INTERNATIONALE</span><span>MILLAU · AVEYRON</span></div>
+    <div className="hero-layout">
+      <div className="hero-copy">
+        <p className="eyebrow">CINQ MUSICIENS. UNE MÊME ÉNERGIE.</p>
+        <h1>L’OkaZ<span className="hero-outline">DE VIBRER.</span></h1>
+        <p className="hero-description">Les chansons que vous aimez.<br />L’énergie du live, ensemble.</p>
+        <div className="hero-actions">
+          <button className="primary-action" onClick={() => scrollToSection('contact')}>Nous contacter <ArrowUpRight size={20} /></button>
+          <button className="video-action" onClick={() => scrollToSection('videos')}><Play size={18} /> Écouter le groupe</button>
+        </div>
       </div>
-
-      <div className="relative z-10 max-w-4xl mx-auto px-4 text-center mt-auto mb-16">
-        <h1 className="mb-4 md:mb-6">
-          <img
-            src="/logo-okaz-transparent.png"
-            alt="L'OkaZ"
-            width={640}
-            height={240}
-            className="h-20 md:h-32 lg:h-40 w-auto mx-auto"
-          />
-          <span className="sr-only">
-            L'OkaZ — groupe de musique variété française et internationale en Aveyron
-          </span>
-        </h1>
-        <p className="text-base md:text-2xl mb-3 md:mb-4">
-          Valentine, Pier-O, Laurent, Teddy et PH
-        </p>
-        <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-2xl mx-auto">
-          Groupe de musique variété française et internationale basé en Aveyron.
-          Nous animons vos soirées, festivals et événements avec énergie et passion.
-        </p>
-        <button
-          onClick={() => scrollToSection('contact')}
-          className="bg-[#c0392b] text-white px-6 py-3 md:px-8 md:py-4 rounded-md text-base md:text-lg font-semibold hover:bg-[#a02e23] shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
-        >
-          Nous contacter
-        </button>
-      </div>
-    </section>
-  );
-};
-
+      <figure className="hero-photo">
+        <img src="/Laissac 2025-1.jpeg" alt="L’OkaZ sur scène à Laissac en 2025" fetchPriority="high" />
+        <figcaption><span>L’OkaZ sur scène</span><span>LAISSAC / 2025</span></figcaption>
+        <span className="live-stamp" aria-hidden="true">ON JOUE.<br />VOUS DANSEZ.</span>
+      </figure>
+    </div>
+    <div className="hero-bottom"><span>Valentine · Pier-O · Laurent · Teddy · PH</span><button onClick={() => scrollToSection('le-groupe')}>DÉCOUVRIR LE GROUPE <ArrowDown size={18} /></button></div>
+    <div className="concert-strip" aria-hidden="true"><span>FESTIVALS</span><span>✳</span><span>BALS</span><span>✳</span><span>SOIRÉES PRIVÉES</span><span>✳</span><span>LIVE & ENSEMBLE</span></div>
+  </section>
+);
 export default Hero;

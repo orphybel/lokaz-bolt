@@ -187,7 +187,7 @@ const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
   const currentAlbum = albums[currentAlbumIndex];
 
   return (
-    <section id="photos" className="py-20 bg-gray-900">
+    <section id="photos" className="content-section py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-100 mb-4">
           Photos
@@ -221,6 +221,10 @@ const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
             {currentAlbum.photos.map((photo, index) => (
               <div
                 key={index}
+                role="button"
+                tabIndex={0}
+                aria-label={`Agrandir ${currentAlbum.title}, photo ${index + 1}`}
+                onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onImageClick(photo); } }}
                 className="relative aspect-square overflow-hidden rounded-lg cursor-pointer group"
                 onClick={() => onImageClick(photo)}
               >
