@@ -32,9 +32,9 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/15 bg-ink/95">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <a href="#accueil" className="whitespace-nowrap text-[2rem] font-black tracking-[-0.08em]" aria-label="L’OkaZ, accueil">
-            L’OkaZ
-            <span className="ml-3 inline-block align-middle text-xs tracking-[0.05em] text-acid">LIVE</span>
+          <a href="#accueil" className="flex items-center whitespace-nowrap" aria-label="L’OkaZ, accueil">
+            <img src="/logo-okaz-transparent.png" alt="L’OkaZ" width={150} height={41} className="h-9 w-auto md:h-10" />
+            <span className="ml-3 text-xs font-black tracking-[0.05em] text-acid">LIVE</span>
           </a>
 
           <nav className="hidden items-center gap-3 md:flex lg:gap-[22px]">
