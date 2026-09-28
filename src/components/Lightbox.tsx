@@ -30,7 +30,7 @@ const Lightbox = ({ imageUrl, onClose }: LightboxProps) => {
     >
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 text-white hover:text-[#c0392b] transition-colors z-10"
+        className="absolute top-4 right-4 text-white hover:text-accent transition-colors z-10"
         aria-label="Fermer"
       >
         <X className="h-8 w-8" />
@@ -40,7 +40,7 @@ const Lightbox = ({ imageUrl, onClose }: LightboxProps) => {
         <img
           src={imageUrl}
           alt="Photo en plein écran"
-          className="max-w-full max-h-[90vh] object-contain rounded-lg"
+          className="max-w-full max-h-[90vh] object-contain"
         />
       </div>
     </div>

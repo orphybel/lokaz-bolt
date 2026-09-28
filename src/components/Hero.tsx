@@ -1,46 +1,126 @@
+import { useEffect, useRef } from 'react';
+import { ArrowDown, ArrowUpRight, Play } from 'lucide-react';
+
 interface HeroProps {
   scrollToSection: (id: string) => void;
 }
 
+const STRIP_ITEMS = ['FESTIVALS', 'BALS', 'SOIRÉES PRIVÉES', 'LIVE & ENSEMBLE'];
+
+const prefersReducedMotion = () =>
+  typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 const Hero = ({ scrollToSection }: HeroProps) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // React ne pose pas toujours l'attribut `muted` : on le force pour que
+  // Safari iOS accepte la lecture automatique.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || prefersReducedMotion()) return;
+    video.muted = true;
+    video.play().catch(() => {});
+  }, []);
+
   return (
-    <section className="relative h-[70vh] md:h-screen flex items-center justify-center text-white">
-      <div
-        className="absolute inset-0 bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'url(/Affiche_groupe_foule.webp)',
-          backgroundSize: '300%',
-        }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+    <section id="accueil" className="overflow-hidden bg-ink pt-[100px] md:pt-[110px]">
+      <div className="mx-auto max-w-[1264px] px-6">
+        <div className="flex justify-between gap-4 border-b border-white/20 pb-6 text-xs font-bold tracking-[0.02em] text-[#c1c1b8] md:tracking-[0.12em]">
+          <span>VARIÉTÉ FRANÇAISE &amp; INTERNATIONALE</span>
+          <span className="text-right">MILLAU · AVEYRON</span>
+        </div>
+
+        <div className="grid grid-cols-1 items-center gap-9 py-9 md:grid-cols-[19rem_1fr] md:gap-0 md:pb-12 md:pt-14">
+          <div className="relative z-10">
+            <p className="mb-6 text-xs font-bold tracking-[0.05em] text-accent md:tracking-[0.12em]">
+              CINQ MUSICIENS. UNE MÊME ÉNERGIE.
+            </p>
+            <h1 className="font-display md:[text-shadow:0_4px_24px_rgba(0,0,0,0.55)] text-[clamp(4.7rem,18vw,8rem)] font-normal leading-[0.98] md:text-[clamp(5rem,9.8vw,9rem)]">
+              L’OkaZ{' '}
+              <span className="block whitespace-nowrap text-[0.58em] leading-[1.15] text-accent">DE VIBRER.</span>
+              <span className="sr-only">
+                {' '}— groupe de musique variété française et internationale en Aveyron
+              </span>
+            </h1>
+            <p className="mt-7 text-lg leading-[1.65] text-[#cfcfc8]">
+              Les chansons que vous aimez.
+              <br />
+              L’énergie du live, ensemble.
+            </p>
+            <p className="mb-7 mt-3 max-w-[18rem] text-sm leading-relaxed text-[#9d9d95]">
+              Groupe de variété basé en Aveyron : bals, festivals, fêtes de village et soirées privées.
+            </p>
+            <div className="flex flex-col items-start gap-4">
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="inline-flex items-center gap-5 bg-acid px-6 py-4 font-extrabold text-ink transition hover:-translate-y-[3px] hover:bg-accent"
+              >
+                Nous contacter <ArrowUpRight size={20} />
+              </button>
+              <button
+                onClick={() => scrollToSection('videos')}
+                className="inline-flex items-center gap-2.5 border-b border-[#777] py-3 text-sm"
+              >
+                <Play size={18} /> Écouter le groupe
+              </button>
+            </div>
+          </div>
+
+          <figure className="relative mb-0 ml-1 mr-2.5 mt-2.5 rotate-3 border border-[#666] bg-[#252525] md:ml-0 md:mt-0">
+            <video
+              ref={videoRef}
+              className="block aspect-video w-full object-cover object-[30%_50%]"
+              src="/video/hero-foule.mp4"
+              poster="/video/hero-foule.webp"
+              autoPlay={!prefersReducedMotion()}
+              muted
+              loop
+              playsInline
+              preload="auto"
+              aria-hidden="true"
+            />
+            <figcaption className="flex justify-between gap-3 p-4 text-xs font-bold tracking-[0.04em]">
+              <span>L’OkaZ en live</span>
+              <span>AVEYRON</span>
+            </figcaption>
+            <span
+              className="absolute -right-4 bottom-[60px] -rotate-[9deg] border-2 border-ink bg-accent p-5 text-xl font-black leading-[1.1] text-ink"
+              aria-hidden="true"
+            >
+              ON JOUE.
+              <br />
+              VOUS DANSEZ.
+            </span>
+          </figure>
+        </div>
+
+        <div className="flex flex-col items-start gap-6 border-t border-white/20 pb-[38px] pt-6 text-xs font-bold leading-[1.7] tracking-[0.04em] text-[#c1c1b8] md:flex-row md:items-center md:justify-between md:leading-normal">
+          <span>Valentine · Pier-O · Laurent · Teddy · PH</span>
+          <button onClick={() => scrollToSection('le-groupe')} className="flex items-center gap-3 text-paper">
+            DÉCOUVRIR LE GROUPE <ArrowDown size={18} />
+          </button>
+        </div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 text-center mt-auto mb-16">
-        <h1 className="mb-4 md:mb-6">
-          <img
-            src="/logo-okaz-transparent.png"
-            alt="L'OkaZ"
-            width={640}
-            height={240}
-            className="h-20 md:h-32 lg:h-40 w-auto mx-auto"
-          />
-          <span className="sr-only">
-            L'OkaZ — groupe de musique variété française et internationale en Aveyron
-          </span>
-        </h1>
-        <p className="text-base md:text-2xl mb-3 md:mb-4">
-          Valentine, Pier-O, Laurent, Teddy et PH
-        </p>
-        <p className="text-sm md:text-xl mb-6 md:mb-8 max-w-2xl mx-auto">
-          Groupe de musique variété française et internationale basé en Aveyron.
-          Nous animons vos soirées, festivals et événements avec énergie et passion.
-        </p>
-        <button
-          onClick={() => scrollToSection('contact')}
-          className="bg-[#c0392b] text-white px-6 py-3 md:px-8 md:py-4 rounded-md text-base md:text-lg font-semibold hover:bg-[#a02e23] shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
-        >
-          Nous contacter
-        </button>
+      {/* Bandeau défilant : deux moitiés identiques, l'animation décale de -50 % pour boucler sans saut. */}
+      <div className="overflow-hidden bg-acid py-[18px] text-ink" aria-hidden="true">
+        <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
+          {[0, 1].map((half) => (
+            <div key={half} className="flex shrink-0">
+              {[0, 1, 2].map((repeat) =>
+                STRIP_ITEMS.map((item) => (
+                  <span
+                    key={`${repeat}-${item}`}
+                    className="flex items-center gap-6 whitespace-nowrap pr-6 font-display text-xl md:text-[2rem]"
+                  >
+                    {item}
+                    <span>✳</span>
+                  </span>
+                ))
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

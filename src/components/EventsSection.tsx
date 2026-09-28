@@ -1,4 +1,5 @@
 import { Calendar, MapPin, Clock } from 'lucide-react';
+import SectionTitle from './SectionTitle';
 
 const EventsSection = () => {
   const events = [
@@ -36,38 +37,32 @@ const EventsSection = () => {
   const sortedYears = Object.keys(eventsByYear).sort((a, b) => Number(b) - Number(a));
 
   return (
-    <section id="evenements" className="py-20 bg-gray-800">
+    <section id="evenements" className="border-b border-white/15 bg-paper py-[60px] text-ink md:py-[90px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-100 mb-4">
-          Événements
-        </h2>
-        <div className="w-24 h-1 bg-[#c0392b] mx-auto mb-12"></div>
+        <SectionTitle className="text-ink">Événements</SectionTitle>
 
         <div className="space-y-12">
           {sortedYears.map((year) => (
             <div key={year}>
-              <h3 className="text-3xl font-bold text-gray-100 mb-6 flex items-center">
-                <Calendar className="h-8 w-8 text-[#c0392b] mr-3" />
+              <h3 className="mb-6 flex items-center text-3xl font-bold">
+                <Calendar className="mr-3 h-8 w-8 text-accent-dark" />
                 {year}
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
                 {eventsByYear[Number(year)].map((event, index) => (
                   <div
                     key={index}
-                    className="bg-gray-700 rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border-l-4 border-[#c0392b]"
+                    className="grid grid-cols-1 items-start gap-3 border-t border-ink/35 py-[26px] md:grid-cols-[140px_1fr_260px] md:gap-6"
                   >
-                    <div className="flex items-center text-[#c0392b] font-bold text-lg mb-3">
-                      <Calendar className="h-5 w-5 mr-2" />
-                      <span>{event.date}</span>
-                    </div>
-                    <h4 className="text-2xl font-bold text-gray-100 mb-4">{event.title}</h4>
+                    <div className="text-xl font-bold text-accent-dark md:text-lg">{event.date}</div>
+                    <h4 className="text-2xl font-bold md:text-[1.4rem]">{event.title}</h4>
                     <div className="space-y-2">
-                      <div className="flex items-center text-gray-300">
-                        <MapPin className="h-5 w-5 mr-2 text-[#c0392b]" />
+                      <div className="flex items-center">
+                        <MapPin className="mr-2 h-5 w-5 text-accent-dark" />
                         <span>{event.location}</span>
                       </div>
-                      <div className="flex items-center text-gray-300">
-                        <Clock className="h-5 w-5 mr-2 text-[#c0392b]" />
+                      <div className="flex items-center">
+                        <Clock className="mr-2 h-5 w-5 text-accent-dark" />
                         <span>Dès {event.time}</span>
                       </div>
                     </div>

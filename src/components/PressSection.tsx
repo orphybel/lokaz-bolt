@@ -1,4 +1,5 @@
 import { Newspaper, ExternalLink } from 'lucide-react';
+import SectionTitle from './SectionTitle';
 
 const PressSection = () => {
   const articles = [
@@ -33,24 +34,21 @@ const PressSection = () => {
   ];
 
   return (
-    <section id="la-presse" className="py-20 bg-gray-900">
+    <section id="la-presse" className="border-b border-white/15 bg-ink py-[60px] md:py-[90px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-100 mb-4">
-          La Presse
-        </h2>
-        <div className="w-24 h-1 bg-[#c0392b] mx-auto mb-12"></div>
+        <SectionTitle>La Presse</SectionTitle>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {articles.map((article, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow"
+              className="border-t border-[#555] py-[25px]"
             >
               <div className="flex items-start mb-4">
-                <Newspaper className="h-6 w-6 text-[#c0392b] mr-3 flex-shrink-0 mt-1" />
+                <Newspaper className="h-6 w-6 text-accent mr-3 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold text-gray-100 mb-2">{article.title}</h3>
-                  <p className="text-sm text-gray-400">
+                  <p className="text-sm text-[#b2b2aa]">
                     {article.publication} • {article.date}
                   </p>
                 </div>
@@ -58,7 +56,7 @@ const PressSection = () => {
               <p className="text-gray-300 mb-4">{article.excerpt}</p>
               <a
                 href={article.link}
-                className="inline-flex items-center text-[#c0392b] hover:text-[#a02e23] font-medium transition-colors"
+                className="inline-flex items-center font-medium text-accent transition-colors hover:text-paper"
               >
                 Lire l'article
                 <ExternalLink className="h-4 w-4 ml-2" />

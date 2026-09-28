@@ -1,4 +1,5 @@
 import { Play } from 'lucide-react';
+import SectionTitle from './SectionTitle';
 
 const VideosSection = () => {
 
@@ -26,21 +27,18 @@ const VideosSection = () => {
   ];
 
   return (
-    <section id="videos" className="py-20 bg-gray-800">
+    <section id="videos" className="border-b border-white/15 bg-[#202020] py-[60px] md:py-[90px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-100 mb-4">
-          Vidéos
-        </h2>
-        <div className="w-24 h-1 bg-[#c0392b] mx-auto mb-12"></div>
+        <SectionTitle>Vidéos</SectionTitle>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 gap-[35px] md:grid-cols-2">
           {videos.map((video, index) => (
             <a
               key={index}
               href={`https://www.youtube.com/watch?v=${video.videoId}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group block"
+              className="group block border-b border-white/30"
             >
               <div className="relative aspect-video overflow-hidden">
                 <img
@@ -51,12 +49,12 @@ const VideosSection = () => {
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-opacity flex items-center justify-center">
-                  <div className="bg-[#c0392b] rounded-full p-4 transform group-hover:scale-110 transition-transform">
-                    <Play className="h-8 w-8 text-white fill-white" />
+                  <div className="transform rounded-full bg-accent p-4 transition-transform group-hover:scale-110">
+                    <Play className="h-8 w-8 fill-ink text-ink" />
                   </div>
                 </div>
               </div>
-              <div className="p-4">
+              <div className="py-5">
                 <h3 className="text-lg font-semibold text-gray-100">{video.title}</h3>
               </div>
             </a>
