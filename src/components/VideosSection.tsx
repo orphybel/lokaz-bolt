@@ -49,7 +49,7 @@ const VideosSection = () => {
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-opacity flex items-center justify-center">
-                  <div className="transform rounded-full bg-pink p-4 transition-transform group-hover:scale-110">
+                  <div className="transform rounded-full bg-accent p-4 transition-transform group-hover:scale-110">
                     <Play className="h-8 w-8 fill-ink text-ink" />
                   </div>
                 </div>

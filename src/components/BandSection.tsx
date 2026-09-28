@@ -17,7 +17,7 @@ const BandSection = () => {
         <img
           src="/Lokaz tetes.avif"
           alt="Les 5 musiciens du groupe L'OkaZ"
-          className="mb-7 h-auto w-full border-b-[10px] border-pink md:sticky md:top-[110px] md:row-span-2 md:mb-0"
+          className="mb-7 h-auto w-full border-b-[10px] border-accent md:sticky md:top-[110px] md:row-span-2 md:mb-0"
         />
 
         <div>
@@ -36,7 +36,7 @@ const BandSection = () => {
         <ul className="mt-6 flex flex-wrap gap-2">
           {members.map((member) => (
             <li key={member.name} className="py-3 pr-4">
-              <h3 className="text-lg font-bold text-pink">{member.name}</h3>
+              <h3 className="text-lg font-bold text-accent">{member.name}</h3>
               <p className="text-sm text-gray-300">{member.role}</p>
             </li>
           ))}

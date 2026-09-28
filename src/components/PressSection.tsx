@@ -45,7 +45,7 @@ const PressSection = () => {
               className="border-t border-[#555] py-[25px]"
             >
               <div className="flex items-start mb-4">
-                <Newspaper className="h-6 w-6 text-pink mr-3 flex-shrink-0 mt-1" />
+                <Newspaper className="h-6 w-6 text-accent mr-3 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold text-gray-100 mb-2">{article.title}</h3>
                   <p className="text-sm text-[#b2b2aa]">
@@ -56,7 +56,7 @@ const PressSection = () => {
               <p className="text-gray-300 mb-4">{article.excerpt}</p>
               <a
                 href={article.link}
-                className="inline-flex items-center font-medium text-pink transition-colors hover:text-paper"
+                className="inline-flex items-center font-medium text-accent transition-colors hover:text-paper"
               >
                 Lire l'article
                 <ExternalLink className="h-4 w-4 ml-2" />

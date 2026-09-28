@@ -30,7 +30,7 @@ const Lightbox = ({ imageUrl, onClose }: LightboxProps) => {
     >
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 text-white hover:text-pink transition-colors z-10"
+        className="absolute top-4 right-4 text-white hover:text-accent transition-colors z-10"
         aria-label="Fermer"
       >
         <X className="h-8 w-8" />

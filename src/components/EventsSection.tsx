@@ -45,7 +45,7 @@ const EventsSection = () => {
           {sortedYears.map((year) => (
             <div key={year}>
               <h3 className="mb-6 flex items-center text-3xl font-bold">
-                <Calendar className="mr-3 h-8 w-8 text-plum" />
+                <Calendar className="mr-3 h-8 w-8 text-accent-dark" />
                 {year}
               </h3>
               <div>
@@ -54,15 +54,15 @@ const EventsSection = () => {
                     key={index}
                     className="grid grid-cols-1 items-start gap-3 border-t border-ink/35 py-[26px] md:grid-cols-[140px_1fr_260px] md:gap-6"
                   >
-                    <div className="text-xl font-bold text-plum md:text-lg">{event.date}</div>
+                    <div className="text-xl font-bold text-accent-dark md:text-lg">{event.date}</div>
                     <h4 className="text-2xl font-bold md:text-[1.4rem]">{event.title}</h4>
                     <div className="space-y-2">
                       <div className="flex items-center">
-                        <MapPin className="mr-2 h-5 w-5 text-plum" />
+                        <MapPin className="mr-2 h-5 w-5 text-accent-dark" />
                         <span>{event.location}</span>
                       </div>
                       <div className="flex items-center">
-                        <Clock className="mr-2 h-5 w-5 text-plum" />
+                        <Clock className="mr-2 h-5 w-5 text-accent-dark" />
                         <span>Dès {event.time}</span>
                       </div>
                     </div>

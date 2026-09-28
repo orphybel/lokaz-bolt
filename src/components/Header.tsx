@@ -40,13 +40,13 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
           <nav className="hidden items-center gap-3 md:flex lg:gap-[22px]">
             <button
               onClick={() => scrollToSection('le-groupe')}
-              className="text-xs font-medium text-gray-200 transition-colors hover:text-pink lg:text-sm"
+              className="text-xs font-medium text-gray-200 transition-colors hover:text-accent lg:text-sm"
             >
               Le groupe
             </button>
             <button
               onClick={() => scrollToSection('evenements')}
-              className="text-xs font-medium text-gray-200 transition-colors hover:text-pink lg:text-sm"
+              className="text-xs font-medium text-gray-200 transition-colors hover:text-accent lg:text-sm"
             >
               Événements
             </button>
@@ -55,7 +55,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
             >
               <button
                 onClick={() => scrollToSection('photos')}
-                className="flex items-center space-x-1 text-xs font-medium text-gray-200 transition-colors hover:text-pink lg:text-sm"
+                className="flex items-center space-x-1 text-xs font-medium text-gray-200 transition-colors hover:text-accent lg:text-sm"
               >
                 <span>Photos</span>
                 <ChevronDown className="h-4 w-4" />
@@ -68,7 +68,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
                       onClick={() => {
                         scrollToSection('photos', album);
                       }}
-                      className="block w-full px-4 py-2 text-left text-sm text-gray-200 transition-colors hover:bg-white/10 hover:text-pink"
+                      className="block w-full px-4 py-2 text-left text-sm text-gray-200 transition-colors hover:bg-white/10 hover:text-accent"
                     >
                       {album}
                     </button>
@@ -78,19 +78,19 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
             </div>
             <button
               onClick={() => scrollToSection('videos')}
-              className="text-xs font-medium text-gray-200 transition-colors hover:text-pink lg:text-sm"
+              className="text-xs font-medium text-gray-200 transition-colors hover:text-accent lg:text-sm"
             >
               Vidéos
             </button>
             <button
               onClick={() => scrollToSection('la-presse')}
-              className="text-xs font-medium text-gray-200 transition-colors hover:text-pink lg:text-sm"
+              className="text-xs font-medium text-gray-200 transition-colors hover:text-accent lg:text-sm"
             >
               La Presse
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="bg-acid px-3 py-2 text-xs font-bold text-ink transition-colors hover:bg-pink lg:px-6 lg:text-sm"
+              className="bg-acid px-3 py-2 text-xs font-bold text-ink transition-colors hover:bg-accent lg:px-6 lg:text-sm"
             >
               Nous contacter
             </button>
@@ -99,7 +99,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
           <button
             aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={isMenuOpen}
-            className="text-gray-200 transition-colors hover:text-pink md:hidden"
+            className="text-gray-200 transition-colors hover:text-accent md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -112,37 +112,37 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
           <nav className="max-h-[75vh] space-y-3 overflow-y-auto px-4 py-4">
             <button
               onClick={() => scrollToSection('le-groupe')}
-              className="block w-full py-2 text-left font-medium text-gray-200 transition-colors hover:text-pink"
+              className="block w-full py-2 text-left font-medium text-gray-200 transition-colors hover:text-accent"
             >
               Le groupe
             </button>
             <button
               onClick={() => scrollToSection('evenements')}
-              className="block w-full py-2 text-left font-medium text-gray-200 transition-colors hover:text-pink"
+              className="block w-full py-2 text-left font-medium text-gray-200 transition-colors hover:text-accent"
             >
               Événements
             </button>
             <button
               onClick={() => scrollToSection('photos')}
-              className="block w-full py-2 text-left font-medium text-gray-200 transition-colors hover:text-pink"
+              className="block w-full py-2 text-left font-medium text-gray-200 transition-colors hover:text-accent"
             >
               Photos
             </button>
             <button
               onClick={() => scrollToSection('videos')}
-              className="block w-full py-2 text-left font-medium text-gray-200 transition-colors hover:text-pink"
+              className="block w-full py-2 text-left font-medium text-gray-200 transition-colors hover:text-accent"
             >
               Vidéos
             </button>
             <button
               onClick={() => scrollToSection('la-presse')}
-              className="block w-full py-2 text-left font-medium text-gray-200 transition-colors hover:text-pink"
+              className="block w-full py-2 text-left font-medium text-gray-200 transition-colors hover:text-accent"
             >
               La Presse
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="block w-full bg-acid px-6 py-2 text-left font-bold text-ink transition-colors hover:bg-pink"
+              className="block w-full bg-acid px-6 py-2 text-left font-bold text-ink transition-colors hover:bg-accent"
             >
               Nous contacter
             </button>

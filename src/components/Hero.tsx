@@ -32,12 +32,12 @@ const Hero = ({ scrollToSection }: HeroProps) => {
 
         <div className="grid grid-cols-1 items-center gap-9 py-9 md:grid-cols-[1.15fr_1fr] md:gap-5 md:pb-12 md:pt-14">
           <div className="relative z-10">
-            <p className="mb-6 text-xs font-bold tracking-[0.05em] text-pink md:tracking-[0.12em]">
+            <p className="mb-6 text-xs font-bold tracking-[0.05em] text-accent md:tracking-[0.12em]">
               CINQ MUSICIENS. UNE MÊME ÉNERGIE.
             </p>
             <h1 className="font-display text-[clamp(4.7rem,18vw,8rem)] font-normal leading-[0.98] md:text-[clamp(5rem,9.8vw,9rem)]">
               L’OkaZ{' '}
-              <span className="block whitespace-nowrap text-[0.58em] leading-[1.15] text-pink">DE VIBRER.</span>
+              <span className="block whitespace-nowrap text-[0.58em] leading-[1.15] text-accent">DE VIBRER.</span>
               <span className="sr-only">
                 {' '}— groupe de musique variété française et internationale en Aveyron
               </span>
@@ -53,7 +53,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
             <div className="flex flex-wrap items-center gap-[22px]">
               <button
                 onClick={() => scrollToSection('contact')}
-                className="inline-flex items-center gap-5 bg-acid px-6 py-4 font-extrabold text-ink transition hover:-translate-y-[3px] hover:bg-pink"
+                className="inline-flex items-center gap-5 bg-acid px-6 py-4 font-extrabold text-ink transition hover:-translate-y-[3px] hover:bg-accent"
               >
                 Nous contacter <ArrowUpRight size={20} />
               </button>
@@ -84,7 +84,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
               <span>AVEYRON</span>
             </figcaption>
             <span
-              className="absolute -right-4 bottom-[60px] -rotate-[9deg] border-2 border-ink bg-pink p-5 text-xl font-black leading-[1.1] text-ink"
+              className="absolute -right-4 bottom-[60px] -rotate-[9deg] border-2 border-ink bg-accent p-5 text-xl font-black leading-[1.1] text-ink"
               aria-hidden="true"
             >
               ON JOUE.

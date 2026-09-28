@@ -6,10 +6,10 @@
   :root { color-scheme: dark; }
   html { scroll-behavior: smooth; scroll-padding-top: 90px; }
   body { @apply bg-ink font-sans text-paper; }
-  ::selection { @apply bg-pink text-ink; }
+  ::selection { @apply bg-accent text-ink; }
   button, a { -webkit-tap-highlight-color: transparent; }
   button:focus-visible, a:focus-visible, [role='button']:focus-visible {
-    outline: 3px solid theme('colors.pink');
+    outline: 3px solid theme('colors.accent');
     outline-offset: 5px;
   }
 }

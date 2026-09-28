@@ -190,7 +190,7 @@ const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
   return (
     <section id="photos" className="border-b border-white/15 bg-ink py-[60px] md:py-[90px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle className="text-pink">Photos</SectionTitle>
+        <SectionTitle className="text-accent">Photos</SectionTitle>
 
         <div>
           <div className="flex items-center justify-between mb-8">
@@ -245,7 +245,7 @@ const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
                 onClick={() => setCurrentAlbumIndex(index)}
                 className={`h-3.5 rounded-full transition-all ${
                   index === currentAlbumIndex
-                    ? 'w-8 bg-pink'
+                    ? 'w-8 bg-accent'
                     : 'w-3.5 bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label={`Aller à l'album ${index + 1}`}

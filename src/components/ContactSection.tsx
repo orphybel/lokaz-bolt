@@ -3,7 +3,7 @@ import SectionTitle from './SectionTitle';
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="bg-pink py-[60px] text-ink md:py-[90px]">
+    <section id="contact" className="bg-accent py-[60px] text-ink md:py-[90px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle className="text-ink">Nous contacter</SectionTitle>
 

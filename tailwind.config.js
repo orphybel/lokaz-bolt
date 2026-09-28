@@ -6,8 +6,7 @@ export default {
       colors: {
         ink: '#111111',
         paper: '#f4f4ef',
-        pink: '#ff63b4',
-        plum: '#982456',
+        accent: { DEFAULT: '#ff6b2c', dark: '#b3400b' },
         acid: '#e5fa48',
       },
       keyframes: {
