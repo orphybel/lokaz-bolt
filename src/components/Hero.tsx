@@ -1,5 +1,6 @@
 import { useEffect, useRef, type CSSProperties } from 'react';
 import { ArrowDown, ArrowUpRight, Play } from 'lucide-react';
+import InkStamp from './InkStamp';
 import { hasFinePointer, prefersReducedMotion, subscribeScroll, useMagnetic, useParallax } from '../lib/motion';
 
 interface HeroProps {
@@ -117,19 +118,24 @@ const Hero = ({ scrollToSection }: HeroProps) => {
 
         <div className="grid grid-cols-1 items-center gap-9 py-9 md:grid-cols-[19rem_1fr] md:gap-0 md:pb-12 md:pt-14">
           <div className="relative z-10">
-            <p className="intro mb-6 text-xs font-bold tracking-[0.05em] text-accent md:tracking-[0.12em]" style={delay(80)}>
+            <p className="intro mb-6 text-xs font-bold tracking-[0.05em] text-accent md:tracking-[0.12em]" style={delay(0)}>
               CINQ MUSICIENS. UNE MÊME ÉNERGIE.
             </p>
             <h1 className="font-display md:[text-shadow:0_4px_24px_rgba(0,0,0,0.55)] text-[clamp(4.7rem,18vw,8rem)] font-normal leading-[0.98] md:text-[clamp(5rem,9.8vw,9rem)]">
-              <span className="intro inline-block" style={delay(140)}>L’OkaZ</span>{' '}
-              <span className="intro block whitespace-nowrap text-[0.58em] leading-[1.15] text-accent" style={delay(260)}>
-                DE VIBRER.
+              {/* Chaque ligne sort de son cache, comme les titres de section. */}
+              <span className="hero-line" style={delay(150)}>
+                <span>L’OkaZ</span>
+              </span>{' '}
+              <span className="block whitespace-nowrap text-[0.58em] leading-[1.15] text-accent">
+                <span className="hero-line" style={delay(420)}>
+                  <span>DE VIBRER.</span>
+                </span>
               </span>
               <span className="sr-only">
                 {' '}— groupe de musique variété française et internationale en Aveyron
               </span>
             </h1>
-            <div className="intro" style={delay(380)}>
+            <div className="intro" style={delay(750)}>
               <p className="mt-7 text-lg leading-[1.65] text-[#cfcfc8]">
                 Les chansons que vous aimez.
                 <br />
@@ -139,7 +145,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
                 Groupe de variété basé en Aveyron : bals, festivals, fêtes de village et soirées privées.
               </p>
             </div>
-            <div className="intro flex flex-col items-start gap-4" style={delay(480)}>
+            <div className="intro flex flex-col items-start gap-4" style={delay(880)}>
               <button
                 ref={ctaRef}
                 onClick={() => scrollToSection('contact')}
@@ -162,10 +168,10 @@ const Hero = ({ scrollToSection }: HeroProps) => {
           </div>
 
           {/* Parallaxe sur l'enveloppe, entrée et rotation sur la figure : les deux ne se marchent pas dessus. */}
-          <div ref={figureRef}>
+          <div ref={figureRef} className="intro-impact">
             <figure
-              className="intro relative mb-0 ml-1 mr-2.5 mt-2.5 rotate-3 border border-[#666] bg-[#252525] md:ml-0 md:mt-0"
-              style={delay(200)}
+              className="intro-poster relative mb-0 ml-1 mr-2.5 mt-2.5 rotate-3 border border-[#666] bg-[#252525] md:ml-0 md:mt-0"
+              style={delay(350)}
             >
               <video
                 ref={videoRef}
@@ -183,22 +189,14 @@ const Hero = ({ scrollToSection }: HeroProps) => {
                 <span>L’OkaZ en live</span>
                 <span>AVEYRON</span>
               </figcaption>
-              <span
-                ref={stampRef}
-                className="intro-stamp absolute -right-4 bottom-[60px] -rotate-[9deg] border-2 border-ink bg-accent p-5 text-xl font-black leading-[1.1] text-ink"
-                aria-hidden="true"
-              >
-                ON JOUE.
-                <br />
-                VOUS DANSEZ.
-              </span>
+              <InkStamp ref={stampRef} />
             </figure>
           </div>
         </div>
 
         <div
           className="intro flex flex-col items-start gap-6 border-t border-white/20 pb-[38px] pt-6 text-xs font-bold leading-[1.7] tracking-[0.04em] text-[#c1c1b8] md:flex-row md:items-center md:justify-between md:leading-normal"
-          style={delay(600)}
+          style={delay(1000)}
         >
           <span>Valentine · Pier-O · Laurent · Teddy · PH</span>
           <button
