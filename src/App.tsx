@@ -9,6 +9,7 @@ import PressSection from './components/PressSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import Lightbox from './components/Lightbox';
+import CursorFollower from './components/CursorFollower';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -73,6 +74,8 @@ function App() {
           onClose={() => setLightboxImage(null)}
         />
       )}
+
+      <CursorFollower />
     </div>
   );
 }

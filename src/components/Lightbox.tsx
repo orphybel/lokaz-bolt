@@ -25,12 +25,12 @@ const Lightbox = ({ imageUrl, onClose }: LightboxProps) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 z-50 flex animate-[fade-in_0.25s_ease-out_both] items-center justify-center bg-black bg-opacity-90 p-4"
       onClick={onClose}
     >
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 text-white hover:text-accent transition-colors z-10"
+        className="absolute right-4 top-4 z-10 text-white transition hover:rotate-90 hover:text-accent"
         aria-label="Fermer"
       >
         <X className="h-8 w-8" />
@@ -40,7 +40,7 @@ const Lightbox = ({ imageUrl, onClose }: LightboxProps) => {
         <img
           src={imageUrl}
           alt="Photo en plein écran"
-          className="max-w-full max-h-[90vh] object-contain"
+          className="max-h-[90vh] max-w-full animate-[zoom-in_0.4s_var(--ease-out)_both] object-contain"
         />
       </div>
     </div>

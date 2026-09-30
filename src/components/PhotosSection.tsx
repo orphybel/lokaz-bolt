@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import SectionTitle from './SectionTitle';
+import Reveal from './Reveal';
 
 interface PhotosSectionProps {
   onImageClick: (imageUrl: string) => void;
@@ -192,38 +193,44 @@ const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle className="text-accent">Photos</SectionTitle>
 
-        <div>
+        <Reveal>
           <div className="flex items-center justify-between mb-8">
             <button
               onClick={handlePrevAlbum}
-              className="rounded-full bg-[#252525] p-2 transition-colors hover:bg-[#333]"
+              className="group rounded-full bg-[#252525] p-2 transition hover:bg-accent active:scale-90"
               aria-label="Album précédent"
             >
-              <ChevronLeft className="h-6 w-6 text-gray-200" />
+              <ChevronLeft className="h-6 w-6 text-gray-200 transition-transform group-hover:-translate-x-0.5 group-hover:text-ink" />
             </button>
 
-            <h3 className="flex-1 px-2.5 text-center text-xl font-bold text-gray-100 md:text-3xl">
+            <h3
+              key={currentAlbum.title}
+              aria-live="polite"
+              className="flex-1 animate-[fade-up_0.45s_var(--ease-out)_both] px-2.5 text-center text-xl font-bold text-gray-100 md:text-3xl">
               {currentAlbum.title}
             </h3>
 
             <button
               onClick={handleNextAlbum}
-              className="rounded-full bg-[#252525] p-2 transition-colors hover:bg-[#333]"
+              className="group rounded-full bg-[#252525] p-2 transition hover:bg-accent active:scale-90"
               aria-label="Album suivant"
             >
-              <ChevronRight className="h-6 w-6 text-gray-200" />
+              <ChevronRight className="h-6 w-6 text-gray-200 transition-transform group-hover:translate-x-0.5 group-hover:text-ink" />
             </button>
           </div>
 
           <div className="mb-6 grid grid-cols-2 gap-2.5 sm:gap-4 lg:grid-cols-4">
             {currentAlbum.photos.map((photo, index) => (
+              // Clé liée à la photo : changer d'album remonte les vignettes et rejoue leur entrée en cascade.
               <div
-                key={index}
+                key={photo}
                 role="button"
+                data-cursor="Agrandir"
                 tabIndex={0}
                 aria-label={`Agrandir ${currentAlbum.title}, photo ${index + 1}`}
                 onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onImageClick(photo); } }}
-                className="group relative aspect-[3/4] cursor-pointer overflow-hidden"
+                className="group relative aspect-[3/4] cursor-pointer overflow-hidden animate-[fade-up_0.6s_var(--ease-out)_both]"
+                style={{ animationDelay: `${index * 70}ms` }}
                 onClick={() => onImageClick(photo)}
               >
                 <img
@@ -231,7 +238,7 @@ const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
                   alt={`${currentAlbum.title} - Photo ${index + 1}`}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300"></div>
               </div>
@@ -252,7 +259,7 @@ const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
               />
             ))}
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

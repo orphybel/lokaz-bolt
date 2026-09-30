@@ -1,4 +1,6 @@
+import { useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { subscribeScroll, useMagnetic } from '../lib/motion';
 
 interface HeaderProps {
   isMenuOpen: boolean;
@@ -7,6 +9,18 @@ interface HeaderProps {
 }
 
 const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => {
+  const progressRef = useRef<HTMLDivElement>(null);
+  const ctaRef = useMagnetic<HTMLButtonElement>(0.2);
+
+  // Barre de progression de lecture sous l'en-tête.
+  useEffect(() => {
+    const bar = progressRef.current;
+    if (!bar) return;
+    return subscribeScroll((y) => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.transform = `scaleX(${max > 0 ? Math.min(y / max, 1) : 0})`;
+    });
+  }, []);
 
   const photoAlbums = [
     'Laissac 2025',
@@ -40,13 +54,13 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
           <nav className="hidden items-center gap-3 md:flex lg:gap-[22px]">
             <button
               onClick={() => scrollToSection('le-groupe')}
-              className="text-xs font-medium text-gray-200 transition-colors hover:text-accent lg:text-sm"
+              className="link-underline text-xs font-medium text-gray-200 transition-colors hover:text-accent lg:text-sm"
             >
               Le groupe
             </button>
             <button
               onClick={() => scrollToSection('evenements')}
-              className="text-xs font-medium text-gray-200 transition-colors hover:text-accent lg:text-sm"
+              className="link-underline text-xs font-medium text-gray-200 transition-colors hover:text-accent lg:text-sm"
             >
               Événements
             </button>
@@ -57,10 +71,10 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
                 onClick={() => scrollToSection('photos')}
                 className="flex items-center space-x-1 text-xs font-medium text-gray-200 transition-colors hover:text-accent lg:text-sm"
               >
-                <span>Photos</span>
-                <ChevronDown className="h-4 w-4" />
+                <span className="link-underline">Photos</span>
+                <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:rotate-180 group-focus-within:rotate-180" />
               </button>
-              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200">
+              <div className="invisible absolute left-0 top-full -translate-y-2 pt-2 opacity-0 transition-all duration-200 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                 <div className="max-h-96 w-64 overflow-y-auto border border-white/15 bg-[#252525] py-2">
                   {photoAlbums.map((album, index) => (
                     <button
@@ -68,7 +82,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
                       onClick={() => {
                         scrollToSection('photos', album);
                       }}
-                      className="block w-full px-4 py-2 text-left text-sm text-gray-200 transition-colors hover:bg-white/10 hover:text-accent"
+                      className="block w-full px-4 py-2 text-left text-sm text-gray-200 transition-all duration-200 hover:bg-white/10 hover:pl-6 hover:text-accent"
                     >
                       {album}
                     </button>
@@ -78,17 +92,18 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
             </div>
             <button
               onClick={() => scrollToSection('videos')}
-              className="text-xs font-medium text-gray-200 transition-colors hover:text-accent lg:text-sm"
+              className="link-underline text-xs font-medium text-gray-200 transition-colors hover:text-accent lg:text-sm"
             >
               Vidéos
             </button>
             <button
               onClick={() => scrollToSection('la-presse')}
-              className="text-xs font-medium text-gray-200 transition-colors hover:text-accent lg:text-sm"
+              className="link-underline text-xs font-medium text-gray-200 transition-colors hover:text-accent lg:text-sm"
             >
               La Presse
             </button>
             <button
+              ref={ctaRef}
               onClick={() => scrollToSection('contact')}
               className="bg-acid px-3 py-2 text-xs font-bold text-ink transition-colors hover:bg-accent lg:px-6 lg:text-sm"
             >
@@ -108,7 +123,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
       </div>
 
       {isMenuOpen && (
-        <div className="border-t border-white/15 bg-ink md:hidden">
+        <div className="animate-[fade-up_0.3s_var(--ease-out)_both] border-t border-white/15 bg-ink md:hidden">
           <nav className="max-h-[75vh] space-y-3 overflow-y-auto px-4 py-4">
             <button
               onClick={() => scrollToSection('le-groupe')}
@@ -149,6 +164,12 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
           </nav>
         </div>
       )}
+
+      <div
+        ref={progressRef}
+        className="absolute bottom-[-1px] left-0 h-[2px] w-full origin-left scale-x-0 bg-accent"
+        aria-hidden="true"
+      />
     </header>
   );
 };
