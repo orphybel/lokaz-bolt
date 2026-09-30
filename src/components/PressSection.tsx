@@ -1,5 +1,6 @@
 import { Newspaper, ExternalLink } from 'lucide-react';
 import SectionTitle from './SectionTitle';
+import Reveal from './Reveal';
 
 const PressSection = () => {
   const articles = [
@@ -40,8 +41,10 @@ const PressSection = () => {
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {articles.map((article, index) => (
-            <div
+            <Reveal
               key={index}
+              as="article"
+              delay={(index % 2) * 120}
               className="border-t border-[#555] py-[25px]"
             >
               <div className="flex items-start mb-4">
@@ -56,12 +59,12 @@ const PressSection = () => {
               <p className="text-gray-300 mb-4">{article.excerpt}</p>
               <a
                 href={article.link}
-                className="inline-flex items-center font-medium text-accent transition-colors hover:text-paper"
+                className="link-underline group inline-flex items-center font-medium text-accent transition-colors hover:text-paper"
               >
                 Lire l'article
-                <ExternalLink className="h-4 w-4 ml-2" />
+                <ExternalLink className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </a>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

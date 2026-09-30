@@ -1,5 +1,6 @@
 import { Calendar, MapPin, Clock } from 'lucide-react';
 import SectionTitle from './SectionTitle';
+import Reveal from './Reveal';
 
 const EventsSection = () => {
   const events = [
@@ -44,14 +45,15 @@ const EventsSection = () => {
         <div className="space-y-12">
           {sortedYears.map((year) => (
             <div key={year}>
-              <h3 className="mb-6 flex items-center text-3xl font-bold">
+              <Reveal as="h3" variant="left" className="mb-6 flex items-center text-3xl font-bold">
                 <Calendar className="mr-3 h-8 w-8 text-accent-dark" />
                 {year}
-              </h3>
+              </Reveal>
               <div>
                 {eventsByYear[Number(year)].map((event, index) => (
-                  <div
+                  <Reveal
                     key={index}
+                    delay={index * 90}
                     className="grid grid-cols-1 items-start gap-3 border-t border-ink/35 py-[26px] md:grid-cols-[140px_1fr_260px] md:gap-6"
                   >
                     <div className="text-xl font-bold text-accent-dark md:text-lg">{event.date}</div>
@@ -66,7 +68,7 @@ const EventsSection = () => {
                         <span>Dès {event.time}</span>
                       </div>
                     </div>
-                  </div>
+                  </Reveal>
                 ))}
               </div>
             </div>

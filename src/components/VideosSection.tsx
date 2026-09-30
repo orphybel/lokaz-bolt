@@ -1,5 +1,6 @@
 import { Play } from 'lucide-react';
 import SectionTitle from './SectionTitle';
+import Reveal from './Reveal';
 
 const VideosSection = () => {
 
@@ -33,31 +34,33 @@ const VideosSection = () => {
 
         <div className="grid grid-cols-1 gap-[35px] md:grid-cols-2">
           {videos.map((video, index) => (
-            <a
-              key={index}
-              href={`https://www.youtube.com/watch?v=${video.videoId}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block border-b border-white/30"
-            >
-              <div className="relative aspect-video overflow-hidden">
-                <img
-                  src={video.thumbnail}
-                  alt={video.title}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-opacity flex items-center justify-center">
-                  <div className="transform rounded-full bg-accent p-4 transition-transform group-hover:scale-110">
-                    <Play className="h-8 w-8 fill-ink text-ink" />
+            <Reveal key={index} delay={(index % 2) * 120}>
+              <a
+                href={`https://www.youtube.com/watch?v=${video.videoId}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cursor="Lecture"
+                className="group block border-b border-white/30 transition-colors duration-300 hover:border-accent"
+              >
+                <div className="relative aspect-video overflow-hidden">
+                  <img
+                    src={video.thumbnail}
+                    alt={video.title}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-40 transition-colors duration-300 group-hover:bg-opacity-50 flex items-center justify-center">
+                    <div className="rounded-full bg-accent p-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[-8deg]">
+                      <Play className="h-8 w-8 fill-ink text-ink" />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="py-5">
-                <h3 className="text-lg font-semibold text-gray-100">{video.title}</h3>
-              </div>
-            </a>
+                <div className="py-5">
+                  <h3 className="text-lg font-semibold text-gray-100 transition-colors duration-300 group-hover:text-accent">{video.title}</h3>
+                </div>
+              </a>
+            </Reveal>
           ))}
         </div>
       </div>
