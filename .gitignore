@@ -21,3 +21,6 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Fichiers temporaires de Vite
+vite.config.ts.timestamp-*

@@ -28,13 +28,10 @@ ContactSection combine coordonnées statiques et formulaire contrôlé avec feed
 
 Footer affiche le logo, les mentions légales et un résumé succinct.
 
-Assets statiques : les visuels utilisés par les sections (logo, photo de groupe, arrière-plan du hero) résident dans public/, ce qui les rend directement accessibles via un chemin absolu (ex. /logo-okaz-noir.avif).{line_range_start=14 line_range_end=68 path=public/README_PLACEHOLDER?】 wait cite? need evidence. listing from ls not file. maybe index? better mention Header uses src="/logo-okaz-noir.avif" etc already cite.
+Assets statiques : les visuels utilisés par les sections (logo, photo de groupe, arrière-plan du hero) résident dans public/, ce qui les rend directement accessibles via un chemin absolu (ex. /logo-okaz-noir.avif).
 
 Points importants pour la suite de l’apprentissage
-Gestion des états locaux : App passe des callbacks (scrollToSection, setLightboxImage) pour coordonner les interactions entre sections. Comprendre le flux de données de haut en bas est essentiel avant d’introduire un state manager ou des contexts.【F:src/App.tsx git_url="https://github.com/orphybel/lokaz-bolt/blob/main/public/README_PLACEHOLDER?】 wait cite? need evidence. listing from ls not file. maybe index? better mention Header uses src="/logo-okaz-noir.avif" etc already cite.
-
-Points importants pour la suite de l’apprentissage
-Gestion des états locaux : App passe des callbacks (scrollToSection, setLightboxImage) pour coordonner les interactions entre sections. Comprendre le flux de données de haut en bas est essentiel avant d’introduire un state manager ou des contexts.【F:src/App.tsx#L14-L68"}
+Gestion des états locaux : App passe des callbacks (scrollToSection, setLightboxImage) pour coordonner les interactions entre sections. Comprendre le flux de données de haut en bas est essentiel avant d’introduire un state manager ou des contexts.
 
 Réactivité & accessibilité : la navigation mobile, les boutons de carrousel avec libellés ARIA, la fermeture via Échap ou clic hors du contenu sont de bons exemples de pratiques à maintenir lorsque vous ajouterez de nouvelles interactions.
 
