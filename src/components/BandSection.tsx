@@ -1,10 +1,8 @@
 import SectionTitle from './SectionTitle';
 import Reveal from './Reveal';
-import { useReveal } from '../lib/motion';
+import BandPhoto from './BandPhoto';
 
 const BandSection = () => {
-  // L'image est `sticky` en desktop : on anime l'image elle-même plutôt qu'un conteneur.
-  const imageRef = useReveal<HTMLImageElement>();
   const members = [
     { name: 'Valentine', role: 'Voix' },
     { name: 'Pier-O', role: 'Batterie' },
@@ -18,13 +16,7 @@ const BandSection = () => {
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-start px-4 sm:px-6 md:grid-cols-2 md:gap-x-[50px] lg:px-8">
         <SectionTitle className="text-gray-100 md:col-span-2">Le groupe</SectionTitle>
 
-        <img
-          ref={imageRef}
-          data-reveal="wipe"
-          src="/Lokaz tetes.avif"
-          alt="Les 5 musiciens du groupe L'OkaZ"
-          className="reveal mb-7 h-auto w-full border-b-[10px] border-accent md:sticky md:top-[110px] md:row-span-2 md:mb-0"
-        />
+        <BandPhoto />
 
         <Reveal delay={150}>
           <p className="mb-6 text-lg leading-relaxed text-gray-300">
