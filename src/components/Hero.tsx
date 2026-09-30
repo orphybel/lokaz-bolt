@@ -1,5 +1,6 @@
 import { useEffect, useRef, type CSSProperties } from 'react';
 import { ArrowDown, ArrowUpRight, Play } from 'lucide-react';
+import InkStamp from './InkStamp';
 import { hasFinePointer, prefersReducedMotion, subscribeScroll, useMagnetic, useParallax } from '../lib/motion';
 
 interface HeroProps {
@@ -167,7 +168,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
           </div>
 
           {/* Parallaxe sur l'enveloppe, entrée et rotation sur la figure : les deux ne se marchent pas dessus. */}
-          <div ref={figureRef}>
+          <div ref={figureRef} className="intro-impact">
             <figure
               className="intro-poster relative mb-0 ml-1 mr-2.5 mt-2.5 rotate-3 border border-[#666] bg-[#252525] md:ml-0 md:mt-0"
               style={delay(350)}
@@ -188,15 +189,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
                 <span>L’OkaZ en live</span>
                 <span>AVEYRON</span>
               </figcaption>
-              <span
-                ref={stampRef}
-                className="intro-stamp absolute -right-4 bottom-[60px] -rotate-[9deg] border-2 border-ink bg-accent p-5 text-xl font-black leading-[1.1] text-ink"
-                aria-hidden="true"
-              >
-                ON JOUE.
-                <br />
-                VOUS DANSEZ.
-              </span>
+              <InkStamp ref={stampRef} />
             </figure>
           </div>
         </div>
