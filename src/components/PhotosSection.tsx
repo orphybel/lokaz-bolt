@@ -3,13 +3,34 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import SectionTitle from './SectionTitle';
 import Reveal from './Reveal';
 
+interface Album {
+  title: string;
+  photos: string[];
+  // Identifiant YouTube d'un extrait joué directement dans l'album.
+  videoId?: string;
+}
+
 interface PhotosSectionProps {
   onImageClick: (imageUrl: string) => void;
   selectedAlbum?: string;
 }
 
 const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
-  const albums = [
+  const albums: Album[] = [
+    {
+      title: 'Marchés Gourmands 2026',
+      videoId: 'aiTQ_Go8aRc',
+      photos: [
+        '/Marches Gourmands 2026-1.webp',
+        '/Marches Gourmands 2026-2.webp',
+        '/Marches Gourmands 2026-3.webp',
+        '/Marches Gourmands 2026-4.webp',
+        '/Marches Gourmands 2026-5.webp',
+        '/Marches Gourmands 2026-6.webp',
+        '/Marches Gourmands 2026-7.webp',
+        '/Marches Gourmands 2026-8.webp',
+      ],
+    },
     {
       title: 'Laissac 2025',
       photos: [
@@ -218,6 +239,23 @@ const PhotosSection = ({ onImageClick, selectedAlbum }: PhotosSectionProps) => {
               <ChevronRight className="h-6 w-6 text-gray-200 transition-transform group-hover:translate-x-0.5 group-hover:text-ink" />
             </button>
           </div>
+
+          {currentAlbum.videoId && (
+            <div
+              key={currentAlbum.videoId}
+              className="mx-auto mb-6 aspect-video max-w-4xl overflow-hidden animate-[fade-up_0.6s_var(--ease-out)_both]"
+            >
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${currentAlbum.videoId}?rel=0`}
+                title={`${currentAlbum.title} - Vidéo`}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="h-full w-full border-0"
+              />
+            </div>
+          )}
 
           <div className="mb-6 grid grid-cols-2 gap-2.5 sm:gap-4 lg:grid-cols-4">
             {currentAlbum.photos.map((photo, index) => (

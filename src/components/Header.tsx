@@ -23,6 +23,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: HeaderProps) => 
   }, []);
 
   const photoAlbums = [
+    'Marchés Gourmands 2026',
     'Laissac 2025',
     'Fête de la Musique 2025',
     'Bal des Pompiers 2024',
